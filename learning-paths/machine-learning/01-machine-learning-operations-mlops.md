@@ -8,6 +8,7 @@ Understand how to use the machine learning (ML) pipelines to solve a real busine
 
 - [x] Create terraform infrastructure [repository](https://github.com/kwame-mintah/terraform-aws-machine-learning-pipeline)
 - [ ] Provision resources needed for Amazon SageMaker
+	- See [[02-machine-learning-terraform]] for resources created.
 - [ ] Machine Learning life cycle (MLCL)
 	- [ ] Framing ML problems from business goals
 	- [ ] Access, prepare and process data for the model
@@ -17,11 +18,24 @@ Understand how to use the machine learning (ML) pipelines to solve a real busine
  - [ ] Create user interface
 #### Tech stack
 
+- Github
+	- Github Actions (CI/CD)
 - Amazon Web Services
 	- SageMaker
 	- S3
 	- IAM
 - Terraform
 	- [AWS Provider](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
+
+#### Steps
+
+- Preparing your Amazon SageMaker notebook
+- Downloading data from the internet into Amazon SageMaker
+- Investigating and transforming the data so that it can be fed to Amazon SageMaker algorithms
+- Estimating a model
+- Evaluating the effectiveness of the model
+- Setting the model up to make ongoing predictions
+
+---
 
 #aws #mlops #mlcl
