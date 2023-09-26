@@ -36,6 +36,11 @@ Understand how to use the machine learning (ML) pipelines to solve a real busine
 - Evaluating the effectiveness of the model
 - Setting the model up to make ongoing predictions
 
+#### Resources
+
+- [OpenML](https://www.openml.org/): OpenML is an open platform for sharing datasets, algorithms, and experiments.
+
+
 ---
 
 #aws #mlops #mlcl
