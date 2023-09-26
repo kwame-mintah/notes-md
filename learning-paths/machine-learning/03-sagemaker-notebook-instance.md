@@ -2,9 +2,11 @@
 
 When using the SageMaker notebook instance, you will need to have a S3 Bucket and prefix, that will be used for training and model data. They should be within the same region as the notebook instance, training and hosting Additionally, an IAM role is needed to give training and hosting access to the data.
 
-During the creation of the SageMaker notebook instance, its best to assign a role with the necessary permissions so it used within the same context e.g. `sagemaker.get_execution_role()` otherwise provide the IAM role or ARN that has the correct permissions including access to the data within S3.
+During the creation of the SageMaker notebook instance, its best to assign a role with the necessary permissions so it used within the same context e.g. `sagemaker.get_execution_role()` or provide the IAM role or ARN that has the correct permissions including access to the data within S3.
 
-Because the notebook instance has access to the internet (or download from S3 through `aws s3 cp s3://data-location/data.zip`), can download the data through `wget`:
+If more than one role is required for notebook instances, training, and/or hosting, replace the `get_execution_role()` call with the appropriate full IAM role ARN string(s).
+
+Because the notebook instance has access to the internet (or download from S3 through `aws s3 cp s3://data-location/data.zip` can be achieved using [`subprocess`](https://docs.python.org/3/library/subprocess.html) within the code, but best using [boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)), can download the data through `wget`:
 
 ```shell
 !wget https://archive.ics.uci.edu/ml/machine-learning-databases/00222/bank-additional.zip
@@ -22,7 +24,7 @@ At this stage, the data is stored within the notebook instance and can use packa
 5. Deploy endpoint using model (stored in S3 bucket)
 6. Make a request to the endpoint to test the model.
 
-[^1]: This is my understanding of the process.
+[^1]: This is my current understanding of the process.
 
 ---
 

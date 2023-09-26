@@ -26,7 +26,7 @@ Then check how much data [^4] is in the dataset
 print("Number of samples: {}".format(data.shape[0]))
 ```
 
-Can view the first couple of rows within the dataset using [`head`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.head.html?highlight=head#pandas.DataFrame.head).
+Can view the first couple of rows within the dataset using [`head`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.head.html?highlight=head#pandas.DataFrame.head)(default amount returned is 5).
 
 ```python
 data.head(10)
