@@ -34,5 +34,26 @@ done
 EOF
 ```
 
+Cont. [[03-sagemaker-notebook-instance]]
+
+## Task list
+
+- [ ] Create S3 bucket(s) to contain training dataset, output of training and model created
+- [ ] CloudWatch log group to monitor 
+	- [ ] SageMaker NoteBook Instance debugging and process reporting (/aws/sagemaker/NotebookInstances). ARN example: `log-group:/aws/sagemaker/NotebookInstances:*`
+	- [ ] SageMaker training jobs (/aws/sagemaker/TrainingJobs). ARN example: `log-group:/aws/sagemaker/TrainingJobs:*`
+	- [ ] SageMaker endpoints (/aws/sagemaker/Endpoints/linear-learner). ARN example: `log-group:/aws/sagemaker/Endpoints/linear-learner:*`
+- [ ] Training job, this needs the AmazonSageMakerFullAccess IAM policy IAM. (Unsure about this resources, as training jobs need dataset that has already preprocessed... maybe.)[^1] 
+- [ ] Endpoint(s) [^2] (needs a model ready to deploy)
+	- [ ] Develop environment (Provisioned) [^3]
+	- [ ] Staging environment (Provisioned)
+	- [ ] Production (Serverless?)
+
+
+[^1] Potentially have a training job that are ready in stable environments, like staging and production?
+[^2] There are two types of endpoints: provisioned or serverless. Provisioned allows for a production and shadow variant, while serverless only allows production.
+[^3] Potentially set up CI/CD for copying the newest model from develop account to staging account. Maybe a new endpoint configuration each time...
+
+---
 
 #aws #terraform #mlops 
