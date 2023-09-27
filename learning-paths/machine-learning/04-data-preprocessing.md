@@ -40,10 +40,12 @@ Additionally find the columns types and null values, this can help identify how 
 data.info()
 ```
 
-It's also possible to create a new [`dataframe`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html) from columns in the first dataframe.
+It's also possible to create a new [`dataframe`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html) from columns in the first DataFrame. Or you could use [`copy`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.copy.html) instead.
 
 ```python
 new_data = data[['column_name1', 'column_name2', 'column_name3', 'column_name4']]
+# or you can use the copy
+new_data = data[['column_name1']].copy()
 ```
 
 #### Broken?
