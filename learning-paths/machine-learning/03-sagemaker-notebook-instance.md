@@ -13,7 +13,12 @@ Because the notebook instance has access to the internet (or download from S3 th
 !unzip -o bank-additional.zip
 ```
 
-At this stage, the data is stored within the notebook instance and can use packages like `numpy` and `pandas` within the Juypter for various preprocessing of the data.
+At this stage, the data is stored within the notebook instance and can use packages like `numpy` and `pandas` within the Juypter for various preprocessing ([[04-data-preprocessing]]) of the data.
+
+
+> [!IMPORTANT]
+> If you upload an existing notebook into the instance having previously run through the cells and would like to continue where you left. You will have to make sure you use the option to run through all the cells above. Or there will be missing variables, DataFrames etc.
+> Cell -> Run All Above
 
 #### Breakdown [^1]
 
