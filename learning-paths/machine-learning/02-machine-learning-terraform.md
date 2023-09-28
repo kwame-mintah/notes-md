@@ -1,6 +1,6 @@
 # Machine Learning Terraform
 
-Resources created for the AWS machine learning pipeline.
+Resources created for the AWS machine learning pipeline. The project will utilise [Terragrunt](https://terragrunt.gruntwork.io/) ([[01-using-terragrunt-with-terraform]]).
 
 ## SageMaker Notebook Instance
 
