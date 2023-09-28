@@ -63,7 +63,9 @@ regression_model = sagemaker.LinearLearner(role=sagemaker.get_execution_role(),
 ```
 
 > [!IMPORTANT]  
->In a production pipeline, it is recommended to convert the data to the Amazon SageMaker protobuf format and store it in Amazon S3. However, to get up and running quickly, AWS provides the convenient method `record_set` for converting and uploading when the dataset is small enough to fit in local memory. It accepts NumPy arrays like the ones you already have, so let's use it here. The `RecordSet` object will keep track of the temporary Amazon S3 location of your data. Use the `estimator.record_set` function to create train, validation, and test records. Then, use the `estimator.fit` function to start your training job.
+>In a production pipeline, it is recommended to convert the data to the Amazon SageMaker protobuf format and store it in Amazon S3. However, to get up and running quickly, AWS
+>provides the convenient method `record_set` for converting and uploading when the dataset is small enough to fit in local memory. It accepts NumPy arrays like the ones you already have, so let's use it here. The `RecordSet` object will keep track of the temporary Amazon S3
+>location of your data. Use the `estimator.record_set` function to create train, validation, and test records. Then, use the `estimator.fit` function to start your training job.
 
 Next use [`record_set()`](https://sagemaker.readthedocs.io/en/stable/algorithms/tabular/linear_learner.html#sagemaker.LinearLearner.record_set) function from [`LinearLearner`](https://sagemaker.readthedocs.io/en/stable/algorithms/tabular/linear_learner.html)(`regression_model`) to set the training, validation, and test parts of the estimator.
 

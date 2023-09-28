@@ -18,7 +18,8 @@ At this stage, the data is stored within the notebook instance and can use packa
 
 > [!IMPORTANT]
 > If you upload an existing notebook into the instance having previously run through the cells and would like to continue where you left. You will have to make sure you use the option to run through all the cells above. Or there will be missing variables, DataFrames etc.
-> Cell -> Run All Above
+> 
+> Select 'Cell' then 'Run All Above'
 
 #### Breakdown [^1]
 
