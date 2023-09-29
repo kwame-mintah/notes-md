@@ -8,21 +8,21 @@ The **TBLF** approach is suggested:
 + **Learn:** Why is it wrong? (What is wrong with this data? How can you solve it?)
 + **Fix:** Fix the problem (What can I do to bring the wrong data to an acceptable solution?)
 
-**Data**  
-: are observations or measurements (unprocessed or processed) represented as text, numbers, or multimedia. [^1]
+**[Data](https://www.usgs.gov/faqs/what-are-differences-between-data-dataset-and-database)**  
+: are observations or measurements (unprocessed or processed) represented as text, numbers, or multimedia.
 
-**Dataset**
-: is a structured collection of data generally associated with a unique body of work. [^2]
+**[Dataset](https://www.usgs.gov/faqs/what-are-differences-between-data-dataset-and-database)**
+: is a structured collection of data generally associated with a unique body of work.
 
 #### Try
 
-Read the .csv file using pandas [`read_csv`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html#pandas-read-csv) , if a column is has no name it will be named `Unnamed`, so will need to remove it. Then check how many features the dataset has [^3] using [`shape`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.shape.html) on the dataset
+Read the .csv file using pandas [`read_csv`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html#pandas-read-csv) , if a column is has no name it will be named `Unnamed`, so will need to remove it. Then check how many features the dataset has [^1] using [`shape`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.shape.html) on the dataset
 
 ```python
 print("Number of features: {}".format(data.shape[1]))
 ```
 
-Then check how much data [^4] is in the dataset 
+Then check how much data [^2] is in the dataset 
 
 ```python
 print("Number of samples: {}".format(data.shape[0]))
@@ -81,7 +81,7 @@ Confirm that the new dataset has removed all missing values with [`isna`](https:
 data_no_missing_value.isna().any()
 ```
 
-If you cannot afford to remove the rows with missing values or don't want to reduce an already small dataset. An alternative is imputing numerical values, for example the mean for the feature (column) [^4] value.
+If you cannot afford to remove the rows with missing values or don't want to reduce an already small dataset. An alternative is imputing numerical values, for example the mean for the feature (column) [^3] value.
 
 ```python
 column_name_MEAN = data["column_name"].mean()
@@ -190,10 +190,9 @@ Its important to explore your data over several dimensions and views to bring th
 
 Visualisation tools, including box and whisker plots and histograms, help support this analysis and understand the distribution of data. Applying multivariate statistics with the help of scatter plots to spot correlations between features. The dataset is cleaned and ready for modeling step.
 
-[^1] [^2] [Difference](https://www.usgs.gov/faqs/what-are-differences-between-data-dataset-and-database) between data and dataset
-[^2] This is the number of columns in the `.csv` file
-[^3] This is the number of rows in the `.csv` file
-[^4] Feature names are case sensitive
+[^1]: This is the number of columns in the `.csv` file
+[^2]: This is the number of rows in the `.csv` file
+[^3]: Feature names are case sensitive
 
 ---
 

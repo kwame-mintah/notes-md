@@ -18,13 +18,13 @@ I recently watched The Cult of Done by [No Boilerplate](https://youtu.be/bJQj1uK
 12. If you have an idea and publish it on the internet, that counts as a ghost of done.
 13. Done is the engine of more.
 
-[^1] The Cult of Done Manifesto by [Kio Stark](http://kiostark.com/) and [Bre Pettis](https://medium.com/@bre)
-
 ## Done manifesto illustrated [^2]
 
-![](cult_of_done_by_james_provost.png)
+![](../attachments/cult_of_done_by_james_provost.png)
 
-[^2] Done Manifesto by [James Provost](https://www.flickr.com/photos/jprovost/3327377382/)
+
+[^1]: The Cult of Done Manifesto by [Kio Stark](http://kiostark.com/) and [Bre Pettis](https://medium.com/@bre)
+[^2]: Done Manifesto by [James Provost](https://www.flickr.com/photos/jprovost/3327377382/)
 
 ---
 

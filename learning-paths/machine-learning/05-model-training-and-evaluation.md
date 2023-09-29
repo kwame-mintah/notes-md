@@ -138,7 +138,7 @@ In short
 
 In summary, developed a regression model using the linear learning algorithm in Amazon SageMaker. Also covering important concepts, such as training, validation, and test splits; the mean squared error regression metric; and analysis of residual error.
 
-[^1] random residuals, mean the data is linear.
+[^1]: random residuals, mean the data is linear.
 
 ---
 

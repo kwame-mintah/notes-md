@@ -36,7 +36,6 @@ TBA.
 
 In summary, you can encode features that are otherwise inaccessible to the model (such as the categorical features). In these circumstances, simple techniques like one-hot encoding or ordinal encoding can go a long way. These techniques allows you to get more from the features you already had. For example, the encoding might be good; however, the pattern was difficult for the model to use. Presenting a variable in a way that makes the data available to the model is a key to the development of a high-performing model.
 
-
 ---
 
 #pandas #sklearn #numpy #sagemaker 
