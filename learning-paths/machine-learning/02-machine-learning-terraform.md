@@ -50,9 +50,9 @@ Cont. [[03-sagemaker-notebook-instance]]
 	- [ ] Production (Serverless?)
 
 
-[^1] Potentially have a training job that are ready in stable environments, like staging and production?
-[^2] There are two types of endpoints: provisioned or serverless. Provisioned allows for a production and shadow variant, while serverless only allows production.
-[^3] Potentially set up CI/CD for copying the newest model from develop account to staging account. Maybe a new endpoint configuration each time...
+[^1]: Potentially have a training job that are ready in stable environments, like staging and production?
+[^2]: There are two types of endpoints: provisioned or serverless. Provisioned allows for a production and shadow variant, while serverless only allows production.
+[^3]: Potentially set up CI/CD for copying the newest model from develop account to staging account. Maybe a new endpoint configuration each time...
 
 ---
 
