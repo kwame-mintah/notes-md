@@ -1,5 +1,7 @@
 # The Cult of Done Manifesto
 
+I recently watched The Cult of Done by [No Boilerplate](https://youtu.be/bJQj1uKtnus?si=RTYE2Ct6dPGSzz3V) and has changed how I view my personal projects. Will be using this manifesto more often, as I now understand there are various ways to complete something and it doesn't always have to be perfect... as failure counts as $done$.
+
 ## Manifesto of done [^1]
 
 1. There are three states of being. Not knowing, action and completion.
@@ -16,15 +18,13 @@
 12. If you have an idea and publish it on the internet, that counts as a ghost of done.
 13. Done is the engine of more.
 
+[^1] The Cult of Done Manifesto by [Kio Stark](http://kiostark.com/) and [Bre Pettis](https://medium.com/@bre)
+
 ## Done manifesto illustrated [^2]
 
-![](../illustrations/cult_of_done_by_james_provost.png)
+![](cult_of_done_by_james_provost.png)
 
----
-
-[^1] The Cult of Done Manifesto by [Kio Stark](http://kiostark.com/) and [Bre Pettis](https://medium.com/@bre)
 [^2] Done Manifesto by [James Provost](https://www.flickr.com/photos/jprovost/3327377382/)
-[^3] The Cult of Done overview by [No Boilerplate](https://youtu.be/bJQj1uKtnus?si=RTYE2Ct6dPGSzz3V)
 
 ---
 
