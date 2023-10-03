@@ -38,7 +38,7 @@ Cont. [[03-sagemaker-notebook-instance]]
 
 ## Task list
 
-- [ ] Create S3 bucket(s) to contain training dataset, output of training and model created
+- [x] Create S3 bucket(s) to contain training dataset, output of training and model created
 - [ ] CloudWatch log group to monitor 
 	- [ ] SageMaker NoteBook Instance debugging and process reporting (/aws/sagemaker/NotebookInstances). ARN example: `log-group:/aws/sagemaker/NotebookInstances:*`
 	- [ ] SageMaker training jobs (/aws/sagemaker/TrainingJobs). ARN example: `log-group:/aws/sagemaker/TrainingJobs:*`
