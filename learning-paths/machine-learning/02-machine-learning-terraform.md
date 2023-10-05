@@ -49,10 +49,15 @@ Cont. [[03-sagemaker-notebook-instance]]
 	- [ ] Staging environment (Provisioned)
 	- [ ] Production (Serverless?)
 
+## Difference between SageMaker Endpoint types?
+
+In general you will use Shadow variants to test and validate your model before production with a smaller portion compared to production[^4].
+
 
 [^1]: Potentially have a training job that are ready in stable environments, like staging and production?
 [^2]: There are two types of endpoints: provisioned or serverless. Provisioned allows for a production and shadow variant, while serverless only allows production.
 [^3]: Potentially set up CI/CD for copying the newest model from develop account to staging account. Maybe a new endpoint configuration each time...
+[^4]: Answer for my question "When deploying your endpoint for your model, what is the difference between production and shadow variants?" during SageMaker Immersion Day.
 
 ---
 
