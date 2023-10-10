@@ -44,20 +44,36 @@ Cont. [[03-sagemaker-notebook-instance]]
 	- [ ] SageMaker training jobs (/aws/sagemaker/TrainingJobs). ARN example: `log-group:/aws/sagemaker/TrainingJobs:*`
 	- [ ] SageMaker endpoints (/aws/sagemaker/Endpoints/linear-learner). ARN example: `log-group:/aws/sagemaker/Endpoints/linear-learner:*`
 - [ ] Training job, this needs the AmazonSageMakerFullAccess IAM policy IAM. (Unsure about this resources, as training jobs need dataset that has already preprocessed... maybe.)[^1] 
+	- [x] Seems that the SageMaker notebook Instance can create a new training job, so will need to have the necessary permission.
 - [ ] Endpoint(s) [^2] (needs a model ready to deploy)
 	- [ ] Develop environment (Provisioned) [^3]
 	- [ ] Staging environment (Provisioned)
 	- [ ] Production (Serverless?)
 
+## Difference between SageMaker notebooks and Studio
+
+There are two tools for machine learning within AWS, SageMaker notebook instance and SageMaker studio. At the time writing, there is only a terraform resource for SageMaker notebook instance ([aws_sagemaker_notebook_instance](https://registry.terraform.io/providers/hashicorp/aws/5.17.0/docs/resources/sagemaker_notebook_instance)) and it seems it is not be possible to create a SageMaker studio. Below is a brief description of both tools. 
+
+For learning purposes, it is best to use the SageMaker notebook instance to better understand, what is needed to take a model into production. This may not be the case, but is my current interpretation of both tools.
+
+### Amazon SageMaker notebook instance
+
+An Amazon SageMaker notebook instance is a machine learning (ML) compute instance running the Jupyter Notebook App. SageMaker manages creating the instance and related resources. Use Jupyter notebooks in your notebook instance to prepare and process data, write code to train models, deploy models to SageMaker hosting, and test or validate your models[^4].
+
+### Amazon SageMaker Studio
+
+Amazon SageMaker Studio is an integrated development environment (IDE) for machine learning (ML) that lets you easily build, train, debug, deploy and monitor your machine learning models. Amazon SageMaker Studio provides a single unified interface for all the tools you need to take your models from experimentation to production and boost your productivity[^4].
+
 ## Difference between SageMaker Endpoint types?
 
-In general you will use Shadow variants to test and validate your model before production with a smaller portion compared to production[^4].
+In general you will use Shadow variants to test and validate your model before production with a smaller portion compared to production[^5].
 
 
 [^1]: Potentially have a training job that are ready in stable environments, like staging and production?
 [^2]: There are two types of endpoints: provisioned or serverless. Provisioned allows for a production and shadow variant, while serverless only allows production.
 [^3]: Potentially set up CI/CD for copying the newest model from develop account to staging account. Maybe a new endpoint configuration each time...
-[^4]: Answer for my question "When deploying your endpoint for your model, what is the difference between production and shadow variants?" during SageMaker Immersion Day.
+[^4]: Which tool is better? SageMaker Studio Vs SageMaker Notebook Instance by [Salman Anwaar](https://medium.com/@salmananwaar1127/which-tool-is-better-sagemaker-studio-vs-sagemaker-notebook-instance-6f64fd545b7f).
+[^5]: Answer to my question "When deploying your endpoint for your model, what is the difference between production and shadow variants?" during SageMaker Immersion Day.
 
 ---
 
