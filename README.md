@@ -8,4 +8,4 @@ note `[ noht ]`
 ---
 > :books: **Note:** *[Dictionary.com](https://www.dictionary.com/browse/note).*
 
-[^1] I'm using [Obsidian.md](https://obsidian.md/) to write my notes, with the [Obsidian Git community plugin](https://github.com/denolehov/obsidian-git) to push to this git repository.
+I'm using [Obsidian.md](https://obsidian.md/) to write my notes, with the [Obsidian Git community plugin](https://github.com/denolehov/obsidian-git) to push to this git repository.
