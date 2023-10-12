@@ -16,7 +16,7 @@ The **TBLF** approach is suggested:
 
 #### Try
 
-Read the .csv file using pandas [`read_csv`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html#pandas-read-csv) , if a column is has no name it will be named `Unnamed`, so will need to remove it. Then check how many features the dataset has [^1] using [`shape`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.shape.html) on the dataset
+Read the comma-separated values (`.csv`) file using pandas [`read_csv`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html#pandas-read-csv) , if a column has no name it will be named `Unnamed`, so may need to remove it. Then check how many features the dataset has [^1] using [`shape`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.shape.html) on the dataset
 
 ```python
 print("Number of features: {}".format(data.shape[1]))
@@ -34,29 +34,33 @@ Can view the first couple of rows within the dataset using [`head`](https://pand
 data.head(10)
 ```
 
-Additionally find the columns types and null values, this can help identify how many columns are numerical or categorical [`info`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.info.html).
+Find the columns types and null values, this can help identify how many columns are numerical or categorical [`info`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.info.html).
 
 ```python
 data.info()
 ```
 
-It's also possible to create a new [`dataframe`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html) from columns in the first DataFrame. Or you could use [`copy`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.copy.html) instead.
+It's also possible to create a new [`dataframe`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html) from columns in the first DataFrame.
 
 ```python
 new_data = data[['column_name1', 'column_name2', 'column_name3', 'column_name4']]
-# or you can use the copy
+```
+
+ Or you could use [`copy`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.copy.html) instead.
+ 
+ ```python
 new_data = data[['column_name1']].copy()
 ```
 
 #### Broken?
 
-Check for missing values with [`isnull`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.isnull.html#pandas.DataFrame.isnull) returns **True** for each cell of the dataset that is missing a value.
+Check for missing values with [`isnull`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.isnull.html#pandas.DataFrame.isnull) which returns **True** for each cell of the dataset that is missing a value.
 
 ```python
 data.isnull().head(10)
 ```
 
-Because all the values returned are booleans, using you [`sum`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.sum.html?highlight=sum#pandas.DataFrame.sum) by column (feature), you will give the amount of true values--the number of missing values for each feature. Missing values are an important issue. Most models won't deal well with missing values.
+Because all the values returned are booleans, using [`sum`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.sum.html?highlight=sum#pandas.DataFrame.sum) by column (feature), you will give the amount of true values--the number of missing values for each feature. 
 
 ```python
 data.isnull().sum()
@@ -68,7 +72,7 @@ In addition to this you can use [`any`](https://pandas.pydata.org/pandas-docs/st
 data_null = data[data.isnull().any(axis=1)]
 ```
 
-Remove the missing values with [`dropna`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.dropna.html?highlight=dropna#pandas.DataFrame.dropna) in the dataset. Save the result in a new dataset. Use [`shape`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.shape.html?highlight=shape#pandas.DataFrame.shape) after to confirm that your dataset has fewer rows because missing values have been removed.
+Missing values are an important issue. Most models won't deal well with missing values. Remove the missing values with [`dropna`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.dropna.html?highlight=dropna#pandas.DataFrame.dropna) in the dataset. Save the result in a new dataset. Use [`shape`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.shape.html?highlight=shape#pandas.DataFrame.shape) after to confirm that your dataset has fewer rows because missing values have been removed.
 
 ```python
 data_no_missing_value = data.dropna()
@@ -99,7 +103,7 @@ data["column_name"].fillna(column_name_MEAN, inplace=True)
 data.isna().any()
 ```
 
-For categorical value imputation, a common approach is to use the most frequent value (the mode). [`value_counts`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.value_counts.html#pandas.Series.value_counts) which finds the most frequent categorical for a feature (how many times it appears in the data).
+For categorical value imputation, a common approach is to use the most frequent value (the mode). [`value_counts`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.value_counts.html#pandas.Series.value_counts)  finds the most frequent categorical for a feature (how many times it appears in the data).
 
 ```python
 data["column_name"].value_counts()
@@ -125,7 +129,7 @@ Once again confirm that there is no missing values in the data, as value should 
 data.isna().any()
 ```
 
-As there is no missing values, [`value_counts`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.value_counts.html#pandas.Series.value_counts) should reflect the new count for the top categorical value is now the sum of the original one plus the number of null values that were inserted. So, if the most common value was 'A' found 10 and there was 10 missing values that were replaced with 'A'. Then the new sum will be A with 15
+As there is no missing values, [`value_counts`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.value_counts.html#pandas.Series.value_counts) should reflect the new count for the top categorical value is now the sum of the original one plus the number of null values that were inserted. So, if the most common value was 'A' found 10 and there was 5 missing values that were replaced with 'A'. Then the new sum will be A with 15
 
 ```python
 data["column_name"].value_counts()
@@ -161,7 +165,7 @@ sns.set()
 grid = sns.pairplot(numerical_data)
 ```
 
-If there is some correlation between other variables. But need numbers to make a decision whether to remove some highly correlated feature. For this, use seaborn [`heatmap`](https://seaborn.pydata.org/generated/seaborn.heatmap.html) is useful while using pandas [`corr`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.corr.html?highlight=corr#pandas.DataFrame.corr) to print correlations.
+If there is some correlation between other variables. But need numbers to make a decision whether to remove some highly correlated feature. For this, seaborn [`heatmap`](https://seaborn.pydata.org/generated/seaborn.heatmap.html) is useful while using pandas [`corr`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.corr.html?highlight=corr#pandas.DataFrame.corr) to print correlations.
 
 ```python
 corr = numerical_data.corr()
@@ -178,7 +182,7 @@ And then use [`heatmap`]() again to confirm the correlation between the variable
 
 #### Plotting
 
-To find the distribution of the individual features with seaborn [`displot`](https://seaborn.pydata.org/generated/seaborn.displot.html)(histogram is the default generated).
+To find the distribution of the individual features with seaborn [`displot`](https://seaborn.pydata.org/generated/seaborn.displot.html) (histogram is the default generated).
 
 ```python
 sns.displot(data[data['column_name_1'] == ?]['column_name_2'])
@@ -188,7 +192,7 @@ sns.displot(data[data['column_name_1'] == ?]['column_name_2'])
 
 Its important to explore your data over several dimensions and views to bring the raw data to a state of processed data, ready to be used for your model. This will help to understand the business scenario and corresponding dataset. Analysing the data using descriptive statistics can aid with better understanding it.
 
-Visualisation tools, including box and whisker plots and histograms, help support this analysis and understand the distribution of data. Applying multivariate statistics with the help of scatter plots to spot correlations between features. The dataset is cleaned and ready for modeling step.
+Visualisation tools, including box and whisker plots and histograms, help support this analysis and understand the distribution of data. Applying multivariate statistics with the help of scatter plots to spot correlations between features. The dataset is cleaned and ready for modelling step.
 
 [^1]: This is the number of columns in the `.csv` file
 [^2]: This is the number of rows in the `.csv` file
