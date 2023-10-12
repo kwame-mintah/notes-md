@@ -39,20 +39,20 @@ Cont. [[03-sagemaker-notebook-instance]]
 ## Task list
 
 - [x] Create S3 bucket(s) to contain training dataset, output of training and model created
-- [ ] CloudWatch log group to monitor 
-	- [ ] SageMaker NoteBook Instance debugging and process reporting (/aws/sagemaker/NotebookInstances). ARN example: `log-group:/aws/sagemaker/NotebookInstances:*`
-	- [ ] SageMaker training jobs (/aws/sagemaker/TrainingJobs). ARN example: `log-group:/aws/sagemaker/TrainingJobs:*`
-	- [ ] SageMaker endpoints (/aws/sagemaker/Endpoints/linear-learner). ARN example: `log-group:/aws/sagemaker/Endpoints/linear-learner:*`
-- [ ] Training job, this needs the AmazonSageMakerFullAccess IAM policy IAM. (Unsure about this resources, as training jobs need dataset that has already preprocessed... maybe.)[^1] 
-	- [x] Seems that the SageMaker notebook Instance can create a new training job, so will need to have the necessary permission.
+- [ ] CloudWatch log group to monitor
+  - [ ] SageMaker NoteBook Instance debugging and process reporting (/aws/sagemaker/NotebookInstances). ARN example: `log-group:/aws/sagemaker/NotebookInstances:*`
+  - [ ] SageMaker training jobs (/aws/sagemaker/TrainingJobs). ARN example: `log-group:/aws/sagemaker/TrainingJobs:*`
+  - [ ] SageMaker endpoints (/aws/sagemaker/Endpoints/linear-learner). ARN example: `log-group:/aws/sagemaker/Endpoints/linear-learner:*`
+- [ ] Training job, this needs the AmazonSageMakerFullAccess IAM policy IAM. (Unsure about this resources, as training jobs need dataset that has already preprocessed... maybe.)[^1]
+  - [x] Seems that the SageMaker notebook Instance can create a new training job, so will need to have the necessary permission.
 - [ ] Endpoint(s) [^2] (needs a model ready to deploy)
-	- [ ] Develop environment (Provisioned) [^3]
-	- [ ] Staging environment (Provisioned)
-	- [ ] Production (Serverless?)
+  - [ ] Develop environment (Provisioned) [^3]
+  - [ ] Staging environment (Provisioned)
+  - [ ] Production (Serverless?)
 
 ## Difference between SageMaker notebooks and Studio
 
-There are two tools for machine learning within AWS, SageMaker notebook instance and SageMaker studio. At the time writing, there is only a terraform resource for SageMaker notebook instance ([aws_sagemaker_notebook_instance](https://registry.terraform.io/providers/hashicorp/aws/5.17.0/docs/resources/sagemaker_notebook_instance)) and it seems it is not be possible to create a SageMaker studio. Below is a brief description of both tools. 
+There are two tools for machine learning within AWS, SageMaker notebook instance and SageMaker studio. At the time writing, there is only a terraform resource for SageMaker notebook instance ([aws_sagemaker_notebook_instance](https://registry.terraform.io/providers/hashicorp/aws/5.17.0/docs/resources/sagemaker_notebook_instance)) and it seems it is not be possible to create a SageMaker studio. Below is a brief description of both tools.
 
 For learning purposes, it is best to use the SageMaker notebook instance to better understand, what is needed to take a model into production. This may not be the case, but is my current interpretation of both tools.
 
@@ -68,6 +68,33 @@ Amazon SageMaker Studio is an integrated development environment (IDE) for machi
 
 In general you will use Shadow variants to test and validate your model before production with a smaller portion compared to production[^5].
 
+## Vulnerability scans ignored
+
+The following checks from [`checkov`](https://www.checkov.io/) and [`tfsec`](https://github.com/aquasecurity/tfsec) have been ignored, reasoning has been provided in the table below. Most time will need to be taken to address these issues and would like to get _something_ working, so these issues will be addressed later.
+
+### checkov
+
+| ID          | Description                                                                                       | Reason for ignore                                                                                                                                                                            |
+| ----------- | ------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CKV2_AWS_61 | Ensure that an S3 bucket has a lifecycle configuration                                            | no expectation to delete objects in the bucket.                                                                                                                                              |
+| CKV2_AWS_62 | Ensure S3 buckets should have event notifications enabled                                         | no lambda function, sns topic or sqs queue exits for notifications purposes.                                                                                                                 |
+| CKV_AWS_109 | Ensure IAM policies does not allow permissions management / resource exposure without constraints | root account needs access to resolve error, the new key policy will not allow you to update the key policy in the future.                                                                    |
+| CKV_AWS_111 | Ensure IAM policies does not allow write access without constraints                               | root account needs access to resolve error, the new key policy will not allow you to update the key policy in the future.                                                                    |
+| CKV_AWS_122 | Ensure that direct internet access is disabled for an Amazon SageMaker Notebook Instance          | to train or host models from a notebook, you need internet access. no [NAT gateway](https://docs.aws.amazon.com/sagemaker/latest/dg/appendix-notebook-and-internet-access.html) created yet. |
+| CKV_AWS_144 | Ensure that S3 bucket has cross-region replication enabled                                        | no need to copy objects to another bucket in a different region out of scope.                                                                                                                |
+| CKV_AWS_356 | Ensure no IAM policies documents allow “\*” as a statement’s resource for restrictable actions    | root account needs access to resolve error, the new key policy will not allow you to update the key policy in the future.                                                                    |
+
+### tfsec
+
+| ID                           | Description | Reason for ignore                                                        |
+| ---------------------------- | ----------- | ------------------------------------------------------------------------ |
+| aws-iam-no-policy-wildcards  | TBD         | Ignored as the SageMaker notebook needs access to a lot of actions.      |
+| aws-vpc-no-public-egress-sgr | TBD         | SageMaker needs access to the internet to trigger training jobs (**?**). |
+
+### Task list:
+
+- Create VPC log (https://docs.paloaltonetworks.com/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/aws-policies/aws-logging-policies/logging-9-enable-vpc-flow-logging, https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/flow_log)
+- Deny access on default security group (https://docs.paloaltonetworks.com/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/aws-policies/aws-networking-policies/networking-4)
 
 [^1]: Potentially have a training job that are ready in stable environments, like staging and production?
 [^2]: There are two types of endpoints: provisioned or serverless. Provisioned allows for a production and shadow variant, while serverless only allows production.
@@ -77,4 +104,4 @@ In general you will use Shadow variants to test and validate your model before p
 
 ---
 
-#aws #terraform #mlops 
+#aws #terraform #mlops #checkov #tfsec #sagemaker
