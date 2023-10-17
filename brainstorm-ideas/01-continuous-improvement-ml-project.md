@@ -16,7 +16,7 @@ Every company is using some form of employee key performance indications (KPIs),
 
 I can't speak for everyone as I have no evidence for this, but often times I set these objectives with my line manager and forget about it until my next performance review to see if I have completed my objectives. This behaviour may not be the same for all companies, but might be evident in large companies (10,000+) in which line managers have multiple employees to look after and there might be an assumption that the employee is actively working towards these objectives.
 
-> "... performance serves as an exemplar of your ever ascending capabilities. By embracing the challenge of exploring your limits, you are forging a path toward the promise of your innate potential, perpetuating the cycle of growth and self-discovery" - Mallard
+> "[ . . . ] performance serves as an exemplar of your ever ascending capabilities. By embracing the challenge of exploring your limits, you are forging a path toward the promise of your innate potential, perpetuating the cycle of growth and self-discovery" - Mallard
 
 Poor performance in companies can lead to being fired from your job - a team is only as good as its leader [^1]. But how much support is an employee provided and how can we actively push employees to continue to grow and be a better version of themselves?
 
@@ -50,7 +50,12 @@ While recommend[^3] means:
 
 The choice of word is very important, as we do not want to *force* objectives onto people or give any impression they *must* do this to perform well. The employee should be the one to make the final choice.
 
+> "Just make sure to keep me in the loop, alright?"
+
 We want to encourage a continuous feedback loop at all times. If an employee has successfully completed a milestone in their objective - they should be given more feedback on how to proceed forwards - what more can they do and also highlight things happening within the organisation they can join.
+> Feedback loop definition [^4]
+> --
+> In general, any feedback loop should have the primary three stages. During the first stage, we capture and store the input - this is the data with which we operate every day. Within the second one, we actually analyze the input, gathered from stage one. Finally, during the last stage, we need to make decisions based on the insights gained from the second stage.
 
 ## Use case examples 
 
@@ -142,6 +147,7 @@ Below are a list of questions that would be interesting to see answered, if a so
 [^1]: A Team Is Only As Good As Its Leader by [PeopleTek](https://peopletekcoaching.com/2022/08/02/a-team-is-only-as-good-as-its-leader-yes-or-no/)
 [^2]: Suggest definition by [Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/suggest)
 [^3]: Recommend definition by [Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/recommend)
+[^4]: What Are Feedback Loops and Why You Need to Implement Them? by [Mila Chervenkova](https://businessmap.io/blog/feedback-loops)
 
 ---
 #ml #ai #ideas
