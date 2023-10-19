@@ -53,6 +53,7 @@ The choice of word is very important, as we do not want to *force* objectives on
 > "Just make sure to keep me in the loop, alright?"
 
 We want to encourage a continuous feedback loop at all times. If an employee has successfully completed a milestone in their objective - they should be given more feedback on how to proceed forwards - what more can they do and also highlight things happening within the organisation they can join.
+
 > Feedback loop definition [^4]
 > --
 > In general, any feedback loop should have the primary three stages. During the first stage, we capture and store the input - this is the data with which we operate every day. Within the second one, we actually analyze the input, gathered from stage one. Finally, during the last stage, we need to make decisions based on the insights gained from the second stage.
@@ -105,9 +106,19 @@ The objective is clear as it provides some pointers on how to accomplish it. Jus
 
 If the employee is on a project and we are aware of upcoming tasks that would allow them to demonstrate what they have learned, they could potentially take up that opportunity or any future opportunities they feel comfortable with. Additionally, a helping hand could be provided in the form of understanding the audience present, so the appropriate level of communication is used.
 
+## Workforce Intelligence
+
+Workforce intelligence is a relatively new term, the idea is that AI is collecting information on each employee to understand what they do during work and allow managers to understand obstacles and distractions that undermine productivity. Workforce intelligence is closely related to the proposed idea / solution.
+
+> "Workforce intelligence transforms workforce data into actionable insights that inform an organization’s strategic and tactical business decisions. Workforce intelligence provides analytics and insight into your: People, Projects, Project pursuits and opportunities[^5]"
+
+Best in class employers proactively address key workforce issues by combining organisational data and employee listening to understand causes and put in place actionable plans to address these issues. Advanced companies use machine learning, artificial intelligence and nudge technology to embed these changes, ultimately improving employee engagement and productivity[^6].
+
 ## Proposed solution
 
-With the large amounts of data available, from human resource (HR) records containing each employees skill set and certifications, to how their performed each year. We can highlight room for improvements within each individual and suggest ways to help them continuously improve.
+With the large amounts of data available, from human resource (HR) records containing each employees skill set and their performance each year. We can highlight room for improvements within each individual and suggest ways to help them continuously improve.
+
+This will allow organisations to have a much better skill visibility and be able to retain their workforce, with tailored pathways to help each individual. As the data is now being used effectively, people with the right skills can be quickly identified and placed in the right places, were the skills are needed and allows for better forecasting of ongoing work and potential future work.
 
 Through machine learning we can identify trends and patterns, to able to distinguish the difference between junior members to senior leadership. And answer questions, such as are junior employees more willing to take more opportunities in comparison to senior employees and why?
 
@@ -131,6 +142,11 @@ These forms of AI can be beneficial below are a couple identified and what they 
 - Entity linking
 	- Helpful to link with existing data within the company.
 
+## Plausible Benefits
+
+1. Improved employee engagement
+2. Workforce intelligence
+
 ## Summary
 
 In summary, organisations have large amounts of data of what is happening in all areas, why not centralise this data and use it to benefit their employees through career growth and self improvement .... TBC...
@@ -148,6 +164,8 @@ Below are a list of questions that would be interesting to see answered, if a so
 [^2]: Suggest definition by [Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/suggest)
 [^3]: Recommend definition by [Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/english/recommend)
 [^4]: What Are Feedback Loops and Why You Need to Implement Them? by [Mila Chervenkova](https://businessmap.io/blog/feedback-loops)
+[^5]: Your ultimate guide to workforce intelligence by [Bridgit](https://gobridgit.com/workforce-intelligence-guide/)
+[^6]: Workforce Intelligence by [Price Water Coopers](https://www.pwc.co.uk/services/human-resource-services/intelligence.html)
 
 ---
 #ml #ai #ideas
