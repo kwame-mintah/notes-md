@@ -62,7 +62,8 @@ regression_model = sagemaker.LinearLearner(role=sagemaker.get_execution_role(),
                                                predictor_type='regressor')
 ```
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
+> 
 >In a production pipeline, it is recommended to convert the data to the Amazon SageMaker protobuf format and store it in Amazon S3. However, to get up and running quickly, AWS
 >provides the convenient method `record_set` for converting and uploading when the dataset is small enough to fit in local memory. It accepts NumPy arrays like the ones you already have, so let's use it here. The `RecordSet` object will keep track of the temporary Amazon S3
 >location of your data. Use the `estimator.record_set` function to create train, validation, and test records. Then, use the `estimator.fit` function to start your training job.
@@ -99,6 +100,11 @@ Deploying your model, involves creating an [endpoint](https://docs.aws.amazon.co
 ```python
 regression_predictor = regression_model.deploy(initial_instance_count=1, instance_type='ml.m4.xlarge')
 ```
+
+> [!IMPORTANT]
+> 
+> There is a soft limit within AWS and will require you to request an increase at account level. For example `ml.m4.xlarge` on my account had a quota of 0 and required me to request an increase on the [Service Quotes](https://eu-west-2.console.aws.amazon.com/servicequotas/home/services/sagemaker/quotas). This can take a couple of days to be processed, recommended to use a smaller tier.
+
 
 As an endpoint is now ready for use, we can use [`predict()`](https://sagemaker.readthedocs.io/en/stable/api/inference/predictors.html#sagemaker.predictor.Predictor.predict).
 
