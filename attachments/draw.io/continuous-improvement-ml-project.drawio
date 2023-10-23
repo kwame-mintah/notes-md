@@ -1,0 +1,33 @@
+<mxfile host="app.diagrams.net" modified="2023-10-23T21:51:48.992Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="kLzZwRboB_Q18xLX_uiO" version="21.8.1" type="device">
+  <diagram name="Page-1" id="2YBvvXClWsGukQMizWep">
+    <mxGraphModel dx="1195" dy="621" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="SCWPvQQhRMh5vSyVo1Tb-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="SCWPvQQhRMh5vSyVo1Tb-1" target="SCWPvQQhRMh5vSyVo1Tb-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="375.16" y="263.25" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SCWPvQQhRMh5vSyVo1Tb-1" value="Organisation&lt;br&gt;Data" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/databases.svg;" vertex="1" parent="1">
+          <mxGeometry x="245.16" y="238.25" width="50" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="SCWPvQQhRMh5vSyVo1Tb-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="SCWPvQQhRMh5vSyVo1Tb-3" target="SCWPvQQhRMh5vSyVo1Tb-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SCWPvQQhRMh5vSyVo1Tb-3" value="Machine&lt;br&gt;Learning" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.machine_learning;fillColor=#2E73B8;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="375.16" y="232" width="50.59" height="61.5" as="geometry" />
+        </mxCell>
+        <mxCell id="SCWPvQQhRMh5vSyVo1Tb-4" value="Insights" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/software-engineering-and-video-gaming/512/475_Idea_insight_key_lamp_lightbulb_Advertising_Promo_Creative_Process-128.png" vertex="1" parent="1">
+          <mxGeometry x="485.16" y="230" width="66.25" height="66.25" as="geometry" />
+        </mxCell>
+        <mxCell id="SCWPvQQhRMh5vSyVo1Tb-8" value="&lt;h1&gt;Continuous Improvement ML Project Flowchart&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="190.29" y="120" width="410" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SCWPvQQhRMh5vSyVo1Tb-9" value="Profile" style="html=1;whiteSpace=wrap;strokeColor=none;fillColor=#0079D6;labelPosition=center;verticalLabelPosition=middle;verticalAlign=top;align=center;fontSize=12;outlineConnect=0;spacingTop=-6;fontColor=#FFFFFF;sketch=0;shape=mxgraph.sitemap.profile;" vertex="1" parent="1">
+          <mxGeometry x="340.46" y="400" width="120" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
