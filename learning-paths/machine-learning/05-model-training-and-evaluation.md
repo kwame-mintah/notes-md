@@ -51,7 +51,7 @@ print(f"Length of test_features is: {test_features.shape}")
 print(f"Length of test_labels is: {test_labels.shape}")
 ```
 
-After splitting the dataset into subsets, use Amazon SageMaker [`LinearLearner()`](https://sagemaker.readthedocs.io/en/stable/algorithms/tabular/linear_learner.html) , which will create a training job within your AWS account, will need to ensure you have the correct roles to execute the job.
+After splitting the dataset into subsets, use Amazon SageMaker [`LinearLearner()`](https://sagemaker.readthedocs.io/en/stable/algorithms/tabular/linear_learner.html) , which will create a training job within your AWS account, you will need to ensure you have the correct roles to execute the job.
 
 ```python
 # Call the LinearLearner estimator object
@@ -82,6 +82,22 @@ The [`fit()`](https://sagemaker.readthedocs.io/en/stable/algorithms/tabular/line
 regression_model.fit([train_records, val_records, test_records])
 ```
 
+> [!NOTE]
+> 
+> When using SageMaker `fit()`, the following happens in the background:
+> 1. Provisions instances
+> 2. Loads algorithm container
+> 3. Loads data from S3
+> 4. Trains model
+> 5. Outputs model artifacts to S3
+> 6. Tears down training cluster
+
+Alternatively you can pass an in-memory array, you can pass in an S3 path as thats were SageMaker training can picking up the data.
+
+```python
+regression_model.fit({'train': sagemaker.s3_inputs(inputs, distribution='FullyReplicated', content_type='text/plain')})
+```
+
 ### Evaluating the model
 #### Amazon SageMaker analytics
 
@@ -104,7 +120,6 @@ regression_predictor = regression_model.deploy(initial_instance_count=1, instanc
 > [!IMPORTANT]
 > 
 > There is a soft limit within AWS and will require you to request an increase at account level. For example `ml.m4.xlarge` on my account had a quota of 0 and required me to request an increase on the [Service Quotes](https://eu-west-2.console.aws.amazon.com/servicequotas/home/services/sagemaker/quotas). This can take a couple of days to be processed, recommended to use a smaller tier.
-
 
 As an endpoint is now ready for use, we can use [`predict()`](https://sagemaker.readthedocs.io/en/stable/api/inference/predictors.html#sagemaker.predictor.Predictor.predict).
 
@@ -139,6 +154,10 @@ A positive residual means a higher prediction than true value, and a negative re
 In short 
 - Random: This means the data is linear. [^1]
 - U or inverse U shape: This points out some non-linearity in the data.
+
+> [!NOTE]
+> 
+> Don't forget to clean up the endpoint after checking the predictions. Using `delete_endpoint()` on the deployed endpoint within SageMaker.
 
 ### Summary
 
