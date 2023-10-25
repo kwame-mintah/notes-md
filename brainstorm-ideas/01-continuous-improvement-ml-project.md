@@ -120,6 +120,8 @@ With the large amounts of data available, from human resource (HR) records conta
 
 This will allow organisations to have a much better skill visibility and be able to retain their workforce, with tailored pathways to help each individual. As the data is now being used effectively, people with the right skills can be quickly identified and placed in the right places, were the skills are needed and allows for better forecasting of ongoing work and potential future work.
 
+![](../attachments/continuous-improvement-ml-project.png)
+
 Through machine learning we can identify trends and patterns, to able to distinguish the difference between junior members to senior leadership. And answer questions, such as are junior employees more willing to take more opportunities in comparison to senior employees and why?
 
 ### Machine learning
