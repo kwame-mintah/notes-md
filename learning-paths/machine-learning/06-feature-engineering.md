@@ -1,6 +1,6 @@
 # Feature Engineering
 
-Feature engineering is the act of making data easier for a machine learning model to understand. It's not adding anything new but are reshaping and curating the existing data to make the existing patterns more apparent. Feature engineering is the process of using domain knowledge of the data to create features that make machine learning algorithms work better than they would on a simple raw encoding.
+Feature engineering is the act of making data easier for a machine learning model to understand. It's not adding anything new but reshaping and curating the existing data to make the existing patterns more apparent. Feature engineering is the process of using domain knowledge of the data to create features that make machine learning algorithms work better than they would on a simple raw encoding.
 
 ## Categorical variables
 ### Binary categorical
