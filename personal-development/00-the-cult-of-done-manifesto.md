@@ -20,7 +20,7 @@ I recently watched The Cult of Done by [No Boilerplate](https://youtu.be/bJQj1uK
 
 ## Done manifesto illustrated [^2]
 
-![](../attachments/cult_of_done_by_james_provost.png)
+![](../attachments/cult-of-done-by-james-provost.png)
 
 
 [^1]: The Cult of Done Manifesto by [Kio Stark](http://kiostark.com/) and [Bre Pettis](https://medium.com/@bre)
