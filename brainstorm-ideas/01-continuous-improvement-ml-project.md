@@ -92,7 +92,7 @@ Alternatively, if Employee B had no programming experience. Then they would be p
 
 This example is different to the ones listed above. An employee has received feedback from their colleagues.
 
-> Feedback recieved
+> Feedback received
 > --
 > I would find it helpful if you could provide more context when giving updates. That way, I can understand the situation better and provide better feedback.
 
