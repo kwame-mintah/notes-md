@@ -30,6 +30,10 @@ This will benefit both the customer and the employee as they will be able to res
 
 As there is now a transcript of the call between the customer and the employee, if the case needs to be looked at in the future, everything would have been captured and a summary could be provided.
 
+## Proposed solution
+
+![](../attachments/customer-support-assistance-ai-project.png)
+
 ## Summary
 
 TBC.
