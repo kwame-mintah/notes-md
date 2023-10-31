@@ -39,11 +39,11 @@ Cont. [[03-sagemaker-notebook-instance]]
 ## Task list
 
 - [x] Create S3 bucket(s) to contain training dataset, output of training and model created
-- [ ] CloudWatch log group to monitor
-  - [ ] SageMaker NoteBook Instance debugging and process reporting (/aws/sagemaker/NotebookInstances). ARN example: `log-group:/aws/sagemaker/NotebookInstances:*`
-  - [ ] SageMaker training jobs (/aws/sagemaker/TrainingJobs). ARN example: `log-group:/aws/sagemaker/TrainingJobs:*`
-  - [ ] SageMaker endpoints (/aws/sagemaker/Endpoints/linear-learner). ARN example: `log-group:/aws/sagemaker/Endpoints/linear-learner:*`
-- [ ] Training job, this needs the AmazonSageMakerFullAccess IAM policy IAM. (Unsure about this resources, as training jobs need dataset that has already preprocessed... maybe.)[^1]
+- [x] CloudWatch log group to monitor
+  - [x] SageMaker NoteBook Instance debugging and process reporting (/aws/sagemaker/NotebookInstances). ARN example: `log-group:/aws/sagemaker/NotebookInstances:*`
+  - [x] SageMaker training jobs (/aws/sagemaker/TrainingJobs). ARN example: `log-group:/aws/sagemaker/TrainingJobs:*`
+  - [x] SageMaker endpoints (/aws/sagemaker/Endpoints/linear-learner). ARN example: `log-group:/aws/sagemaker/Endpoints/linear-learner:*`
+- [x] Training job, this needs the AmazonSageMakerFullAccess IAM policy IAM. (Unsure about this resources, as training jobs need dataset that has already preprocessed... maybe.)[^1]
   - [x] Seems that the SageMaker notebook Instance can create a new training job, so will need to have the necessary permission.
 - [ ] Endpoint(s) [^2] (needs a model ready to deploy)
   - [ ] Develop environment (Provisioned) [^3]
