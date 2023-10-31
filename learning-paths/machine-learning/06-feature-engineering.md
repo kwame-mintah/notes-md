@@ -32,6 +32,36 @@ TBA.
 
 TBA.
 
+```python
+sess = sagemaker.Session()
+
+xgb = sagemaker.estimator.Estimator(container,
+                                    role, 
+                                    instance_count=1, 
+                                    instance_type='ml.m6.xlarge',
+                                    output_path='s3://{}/{}/output'.format(bucket, prefix),
+                                    sagemaker_session=sess)
+xgb.set_hyperparameters(max_depth=5,
+                        eta=0.2,
+                        gamma=4,
+                        min_child_weight=6,
+                        subsample=0.8,
+                        silent=0,
+                        objective='binary:logistic',
+                        num_round=100)
+
+xgb.fit({'train': s3_input_train, 'validation': s3_input_validation})
+```
+
+> [!NOTE]
+> 
+> Specifying training parameters for the estimator, includes the following:
+> 1. The `xboost` algorithm container
+> 2. The IAM role to use
+> 3. Training instance type and count
+> 4. S3 location for output data
+> 5. Algorithm hyperparameters
+
 ## Summary
 
 In summary, you can encode features that are otherwise inaccessible to the model (such as the categorical features). In these circumstances, simple techniques like one-hot encoding or ordinal encoding can go a long way. These techniques allows you to get more from the features you already had. For example, the encoding might be good; however, the pattern was difficult for the model to use. Presenting a variable in a way that makes the data available to the model is a key to the development of a high-performing model.
