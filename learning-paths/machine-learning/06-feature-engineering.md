@@ -56,7 +56,7 @@ xgb.fit({'train': s3_input_train, 'validation': s3_input_validation})
 > [!NOTE]
 > 
 > Specifying training parameters for the estimator, includes the following:
-> 1. The `xboost` algorithm container
+> 1. The `xboost` algorithm[^1] container
 > 2. The IAM role to use
 > 3. Training instance type and count
 > 4. S3 location for output data
@@ -65,6 +65,8 @@ xgb.fit({'train': s3_input_train, 'validation': s3_input_validation})
 ## Summary
 
 In summary, you can encode features that are otherwise inaccessible to the model (such as the categorical features). In these circumstances, simple techniques like one-hot encoding or ordinal encoding can go a long way. These techniques allows you to get more from the features you already had. For example, the encoding might be good; however, the pattern was difficult for the model to use. Presenting a variable in a way that makes the data available to the model is a key to the development of a high-performing model.
+
+[^1]: An algorithm is a sequence of instructions or a set of rules that are followed to complete a task or solve a problem.
 
 ---
 
