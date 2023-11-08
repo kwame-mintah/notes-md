@@ -95,6 +95,19 @@ The proposed flow is the following:
 
 In the example flow above, the user has called customer support to resolve an issue with their account. The AI solution, would have open the relevant page(s) / screen that is needed to start the process to resolve the users account issue. In this instance, the users account number is needed and through 'Speech-to-text' would have populated the 'Account number' field for the employee.
 
+### Artificial Intelligence
+
+- Speech to text
+	- Transcribe audio into text.
+- Sentiment Analysis
+	- Determine if customer interaction was positive, negative or natural. Can be used to highlight
+- Search
+	- As all transcripts will be indexed, allows for AI integration.
+- Summarisation
+	- Provide summaries for calls transcribed, without having to read the entire transcript.
+- Entity recognition
+	- Identify commonly used and domain-specific terms for extraction.
+
 ## Summary
 
 TBC.
