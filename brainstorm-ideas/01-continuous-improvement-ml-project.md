@@ -50,13 +50,15 @@ While recommend[^3] means:
 
 The choice of word is very important, as we do not want to *force* objectives onto people or give any impression they *must* do this to perform well. The employee should be the one to make the final choice.
 
-> "Just make sure to keep me in the loop, alright?"
+> "Just make sure to keep me in the loop, alright?" - *A manager somewhere...*
 
 We want to encourage a continuous feedback loop at all times. If an employee has successfully completed a milestone in their objective - they should be given more feedback on how to proceed forwards - what more can they do and also highlight things happening within the organisation they can join.
 
 > Feedback loop definition [^4]
 > --
 > In general, any feedback loop should have the primary three stages. During the first stage, we capture and store the input - this is the data with which we operate every day. Within the second one, we actually analyze the input, gathered from stage one. Finally, during the last stage, we need to make decisions based on the insights gained from the second stage.
+
+To keep it simple, the idea is identify areas of improvement and/or new skills that will expand an employees' skill set. Then guide them throughout by providing all the necessary information and opportunities to help them succeed in accomplishing their goal and better themselves and the organisation.
 
 ## Use case examples 
 
@@ -122,7 +124,7 @@ This will allow organisations to have a much better skill visibility and be able
 
 ![](../attachments/continuous-improvement-ml-project.png)
 
-Through machine learning we can identify trends and patterns, to able to distinguish the difference between junior members to senior leadership. And answer questions, such as are junior employees more willing to take more opportunities in comparison to senior employees and why?
+Through machine learning we can identify trends and patterns, to distinguish the difference between junior members to senior employees. And understand why junior employees are more willing to take on new opportunities in comparison to senior employees and why?
 
 ### Machine learning
 
@@ -138,16 +140,21 @@ Additionally, we can use [Matrix factorization](https://developers.google.com/ma
 These forms of AI can be beneficial below are a couple identified and what they can help achieve.
 
 - Sentiment analysis
-	- Identify if employee feedback was positive or negative.
+	- Identify if employee feedback was positive, negative or neutral. Can be linked with various data. For example, determine reviews of training undertaken by others was helpful or not. This can help with ensuring *good* materials are provided.
 - Named entity recognition (NER)
 	- Categories text.
 - Entity linking
 	- Helpful to link with existing data within the company.
+- Chatbot and/or Question answering
+	- Potentially helpful for individuals to have somewhere to query information that has been provided to them. For example, why X has been recommended and the reasoning.
+- Video Indexer
+	- Used to extract insights from videos (Seems to be a service provided by Microsoft).
 
 ## Plausible Benefits
 
 1. Improved employee engagement
 2. Workforce intelligence
+3. Reduce cognitive abilities aging
 
 ## Summary
 
