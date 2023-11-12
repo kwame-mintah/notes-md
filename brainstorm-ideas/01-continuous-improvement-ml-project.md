@@ -54,9 +54,9 @@ The choice of word is very important, as we do not want to *force* objectives on
 
 We want to encourage a continuous feedback loop at all times. If an employee has successfully completed a milestone in their objective - they should be given more feedback on how to proceed forwards - what more can they do and also highlight things happening within the organisation they can join.
 
-> Feedback loop definition [^4]
+> Feedback loop definition
 > --
-> In general, any feedback loop should have the primary three stages. During the first stage, we capture and store the input - this is the data with which we operate every day. Within the second one, we actually analyze the input, gathered from stage one. Finally, during the last stage, we need to make decisions based on the insights gained from the second stage.
+> In general, any feedback loop should have the primary three stages. During the first stage, we capture and store the input - this is the data with which we operate every day. Within the second one, we actually analyze the input, gathered from stage one. Finally, during the last stage, we need to make decisions based on the insights gained from the second stage[^4].
 
 To keep it simple, the idea is identify areas of improvement and/or new skills that will expand an employees' skill set. Then guide them throughout by providing all the necessary information and opportunities to help them succeed in accomplishing their goal and better themselves and the organisation.
 
