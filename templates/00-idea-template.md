@@ -1,5 +1,13 @@
 #{{title}}
 
+## Abstract
+
+TBA
+
+## Introduction
+
+TBA.
+
 ## Background
 
 TBA.
@@ -20,5 +28,9 @@ TBA.
 
 TBA.
 
+## Summary
+
+TBA.
+
 ---
-#ideas 
+#ideas #draft
