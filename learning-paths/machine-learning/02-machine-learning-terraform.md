@@ -66,7 +66,7 @@ Amazon SageMaker Studio is an integrated development environment (IDE) for machi
 
 ## Difference between SageMaker Endpoint types?
 
-In general you will use Shadow variants to test and validate your model before production with a smaller portion compared to production[^5].
+In general you will use shadow variants to test and validate your model before production using a smaller portion compared to production[^5]. I have been told that in some AI / ML projects when data scientist deem a model is suitable for usage, it will be deployed to an environment. This means when a model is ready it can be copied to the appropriate location and deployed.
 
 ## Vulnerability scans ignored
 
@@ -93,7 +93,7 @@ The following checks from [`checkov`](https://www.checkov.io/) and [`tfsec`](htt
 
 ### Task list:
 
-- Create VPC log (https://docs.paloaltonetworks.com/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/aws-policies/aws-logging-policies/logging-9-enable-vpc-flow-logging, https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/flow_log)
+- [ ] Create VPC log (https://docs.paloaltonetworks.com/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/aws-policies/aws-logging-policies/logging-9-enable-vpc-flow-logging, https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/flow_log)
 
 [^1]: Potentially have a training job that are ready in stable environments, like staging and production?
 [^2]: There are two types of endpoints: provisioned or serverless. Provisioned allows for a production and shadow variant, while serverless only allows production.
