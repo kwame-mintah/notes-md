@@ -94,7 +94,6 @@ The following checks from [`checkov`](https://www.checkov.io/) and [`tfsec`](htt
 ### Task list:
 
 - Create VPC log (https://docs.paloaltonetworks.com/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/aws-policies/aws-logging-policies/logging-9-enable-vpc-flow-logging, https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/flow_log)
-- Deny access on default security group (https://docs.paloaltonetworks.com/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/aws-policies/aws-networking-policies/networking-4)
 
 [^1]: Potentially have a training job that are ready in stable environments, like staging and production?
 [^2]: There are two types of endpoints: provisioned or serverless. Provisioned allows for a production and shadow variant, while serverless only allows production.
