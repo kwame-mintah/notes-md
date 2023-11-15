@@ -46,8 +46,8 @@ Cont. [[03-sagemaker-notebook-instance]]
 - [x] Training job, this needs the AmazonSageMakerFullAccess IAM policy IAM. (Unsure about this resources, as training jobs need dataset that has already preprocessed... maybe.)[^1]
   - [x] Seems that the SageMaker notebook Instance can create a new training job, so will need to have the necessary permission.
 - [ ] Endpoint(s) [^2] (needs a model ready to deploy)
-  - [ ] Develop environment (Provisioned) [^3]
-  - [ ] Staging environment (Provisioned)
+  - [ ] Develop environment (Provisioned)
+  - [ ] Staging environment (Provisioned)[^3]
   - [ ] Production (Serverless?)
 
 ## Difference between SageMaker notebooks and Studio
@@ -68,9 +68,17 @@ Amazon SageMaker Studio is an integrated development environment (IDE) for machi
 
 In general you will use shadow variants to test and validate your model before production using a smaller portion compared to production[^5]. I have been told that in some AI / ML projects when data scientist deem a model is suitable for usage, it will be deployed to an environment. This means when a model is ready it can be copied to the appropriate location and deployed.
 
+## Resources create while using notebooks
+
+Users are able to create new processing and training jobs and these are not managed by Terraform. When imitating one of these jobs, the name is always unique e.g. `xgboost-YYYY-MM-DD-HH-MM-SS-SSS` at the time of writing these jobs cannot be deleted via the console or CLI. So, beware of what permissions are given to users as this can leave lingering resources when destroying the environment via Terraform.
+
+## Handling model deployment to environments
+
+After Data Scientists have a model they are happy with it will need to be deployed to other environments for monitoring, because the model output is placed into an S3 bucket. If there are different environments (AWS Accounts), the model can be copied across the environment and used to create new inferences (endpoints).
+
 ## Vulnerability scans ignored
 
-The following checks from [`checkov`](https://www.checkov.io/) and [`tfsec`](https://github.com/aquasecurity/tfsec) have been ignored, reasoning has been provided in the table below. Most time will need to be taken to address these issues and would like to get _something_ working, so these issues will be addressed later.
+The following checks from [`checkov`](https://www.checkov.io/) and [`tfsec`](https://github.com/aquasecurity/tfsec) have been ignored, reasoning has been provided in the table below. Most will need some time to address and how the main focus is to get _something_ working, so these issues will be addressed later.
 
 ### checkov
 
