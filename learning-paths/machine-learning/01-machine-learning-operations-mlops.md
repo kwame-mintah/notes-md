@@ -22,6 +22,7 @@ Understand how to use the machine learning (ML) pipelines to solve a real busine
 	- Github Actions (CI/CD)
 - Amazon Web Services
 	- SageMaker
+	- Cloud watch
 	- S3
 	- IAM
 - Terraform
