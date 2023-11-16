@@ -111,7 +111,7 @@ sagemaker.analytics.TrainingJobAnalytics(regression_model._current_job_name,
 
 #### Deploying the model
 
-Deploying your model, involves creating an [endpoint](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpoint.html) , that is connected to the model created from the earlier training job. And is linked to the model and training job used, additionally the model output is stored within an S3 bucket (model.tar.gz).
+Deploying your model, involves creating an [endpoint](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpoint.html) , that is connected to the model created from the earlier training job this can be done with [`deploy()`](https://sagemaker.readthedocs.io/en/stable/frameworks/xgboost/using_xgboost.html#deploy-open-source-xgboost-models). And is linked to the model and training job used, additionally the model output is stored within an S3 bucket (model.tar.gz).
 
 ```python
 regression_predictor = regression_model.deploy(initial_instance_count=1, instance_type='ml.m4.xlarge')
@@ -121,7 +121,7 @@ regression_predictor = regression_model.deploy(initial_instance_count=1, instanc
 > 
 > There is a soft limit within AWS and will require you to request an increase at account level. For example `ml.m4.xlarge` on my account had a quota of 0 and required me to request an increase on the [Service Quotes](https://eu-west-2.console.aws.amazon.com/servicequotas/home/services/sagemaker/quotas). This can take a couple of days to be processed, recommended to use a smaller tier.
 
-As an endpoint is now ready for use, we can use [`predict()`](https://sagemaker.readthedocs.io/en/stable/api/inference/predictors.html#sagemaker.predictor.Predictor.predict).
+As an endpoint is now ready for use, we can use [`predict()`](https://sagemaker.readthedocs.io/en/stable/api/inference/predictors.html#sagemaker.predictor.Predictor.predict) to inference with the endpoint hosting our XGBoost model. Each Predictor provides a predict method which can do inference with numpy arrays, Python lists, or strings. After inference arrays or lists are serialized and sent to the XGBoost model server, predict returns the result of inference against your model.
 
 ```python
 regression_predictor.predict(batch)
