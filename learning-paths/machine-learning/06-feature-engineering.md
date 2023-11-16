@@ -2,6 +2,14 @@
 
 Feature engineering is the act of making data easier for a machine learning model to understand. It's not adding anything new but reshaping and curating the existing data to make the existing patterns more apparent. Feature engineering is the process of using domain knowledge of the data to create features that make machine learning algorithms work better than they would on a simple raw encoding.
 
+## Feature engineering with SageMaker Processing
+
+Amazon SageMaker Processing allows you to run steps for data pre- or post-processing, feature engineering, data validation, or model evaluation workloads on Amazon SageMaker. Processing jobs accept data from Amazon S3 as input and store data into Amazon S3 as output.
+
+![](https://sagemaker.readthedocs.io/en/stable/_images/amazon_sagemaker_processing_image1.png)
+
+To use SageMaker Processing, simply supply a Python data preprocessing script.  For example, using a SageMaker prebuilt [Scikit-learn](https://sagemaker.readthedocs.io/en/stable/amazon_sagemaker_processing.html#data-pre-processing-and-model-evaluation-with-scikit-learn) container, which includes many common functions for processing data.  There are few limitations on what kinds of code and operations you can run, and only a minimal contract:  input and output data must be placed in specified directories.  If this is done, SageMaker Processing automatically loads the input data from S3 and uploads transformed data back to S3 when the job is complete.
+
 ## Categorical variables
 ### Binary categorical
 
