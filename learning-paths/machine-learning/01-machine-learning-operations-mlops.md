@@ -2,7 +2,7 @@
 
 #### Goal
 
-Understand how to use the machine learning (ML) pipelines to solve a real business problem in a project environment. Will understand each phase of the the pipeline and complete a project to solve a business problem. While using the AWS Cloud Infrastructure. 
+Understand how to use the machine learning (ML) pipelines to solve a real business problem in a project environment. Will understand each phase of the the pipeline and complete a project to solve a business problem. While using the AWS Cloud Infrastructure. As per AWS MLOps levels, this would be Level 0 (see more [[07-automated-machine-learning]]).
 
 #### Task list
 
