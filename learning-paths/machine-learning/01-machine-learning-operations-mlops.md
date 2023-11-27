@@ -1,10 +1,10 @@
 # Machine Learning Operations (MLOps)
 
-#### Goal
+## Goal
 
 Understand how to use the machine learning (ML) pipelines to solve a real business problem in a project environment. Will understand each phase of the the pipeline and complete a project to solve a business problem. While using the AWS Cloud Infrastructure. As per AWS MLOps levels, this would be Level 0 (see more [[07-automated-machine-learning]]).
 
-#### Task list
+## Task list
 
 - [x] Create terraform infrastructure [repository](https://github.com/kwame-mintah/terraform-aws-machine-learning-pipeline)
 - [x] Provision resources needed for Amazon SageMaker
@@ -16,7 +16,7 @@ Understand how to use the machine learning (ML) pipelines to solve a real busine
 	- [ ] Deploy ML models
 	- [ ] Iterate - Monitor, optimise and maintain the performance of the model
  - [ ] Create user interface (Simple react frontend)
-#### Tech stack
+## Tech stack
 
 - Github
 	- Github Actions (CI/CD)
@@ -28,7 +28,7 @@ Understand how to use the machine learning (ML) pipelines to solve a real busine
 - Terraform
 	- [AWS Provider](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
 
-#### Steps required
+## Steps required
 
 - Preparing your Amazon SageMaker notebook
 - Downloading data from the internet into Amazon SageMaker
@@ -37,7 +37,7 @@ Understand how to use the machine learning (ML) pipelines to solve a real busine
 - Evaluating the effectiveness of the model
 - Setting the model up to make ongoing predictions
 
-#### Resources
+## Resources
 
 - [OpenML](https://www.openml.org/): OpenML is an open platform for sharing datasets, algorithms, and experiments.
 - [UC Irvine Machine Learning Repository](https://archive.ics.uci.edu/): Maintains datasets as a service to the machine learning community.
