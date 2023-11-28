@@ -16,7 +16,7 @@ The **TBLF** approach is suggested:
 
 #### Try
 
-Read the comma-separated values (`.csv`) file using pandas [`read_csv`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html#pandas-read-csv) , if a column has no name it will be named `Unnamed`, so may need to remove it. Then check how many features the dataset has [^1] using [`shape`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.shape.html) on the dataset
+Read the comma-separated values (`.csv`) file using pandas [`read_csv()`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html#pandas-read-csv) , if a column has no name it will be named `Unnamed`, so may need to remove it. Then check how many features the dataset has [^1] using [`shape`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.shape.html) on the dataset
 
 ```python
 print("Number of features: {}".format(data.shape[1]))
@@ -28,7 +28,7 @@ Then check how much data [^2] is in the dataset
 print("Number of samples: {}".format(data.shape[0]))
 ```
 
-Can view the first couple of rows within the dataset using [`head`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.head.html?highlight=head#pandas.DataFrame.head)(default amount returned is 5).
+Can view the first couple of rows within the dataset using [`head()`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.head.html?highlight=head#pandas.DataFrame.head)(default amount returned is 5).
 
 ```python
 data.head(10)
@@ -66,7 +66,7 @@ Because all the values returned are booleans, using [`sum`](https://pandas.pydat
 data.isnull().sum()
 ```
 
-In addition to this you can use [`any`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.any.html#pandas.DataFrame.any) to filter and return any element that is **True**.
+In addition to this you can use [`any()`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.any.html#pandas.DataFrame.any) to filter and return any element that is **True**.
 
 ```python
 data_null = data[data.isnull().any(axis=1)]
@@ -103,13 +103,13 @@ data["column_name"].fillna(column_name_MEAN, inplace=True)
 data.isna().any()
 ```
 
-For categorical value imputation, a common approach is to use the most frequent value (the mode). [`value_counts`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.value_counts.html#pandas.Series.value_counts)  finds the most frequent categorical for a feature (how many times it appears in the data).
+For categorical value imputation, a common approach is to use the most frequent value (the mode). [`value_counts()`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.value_counts.html#pandas.Series.value_counts)  finds the most frequent categorical for a feature (how many times it appears in the data).
 
 ```python
 data["column_name"].value_counts()
 ```
 
-If you only want the *most* frequency categorical value, then use [`mode`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.mode.html?highlight=mode#pandas.DataFrame.mode), there are slightly different approaches for getting this value.
+If you only want the *most* frequency categorical value, then use [`mode()`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.mode.html?highlight=mode#pandas.DataFrame.mode), there are slightly different approaches for getting this value.
 
 ```python
 data["column_name"].mode(0)
@@ -139,25 +139,25 @@ Unbalanced labels occur when the distribution between the labels presents some o
 
 #### Try Pt. 2
 
-Explore the distributions by calculating the min value, max value, mean, standard deviation, and the 25% and 75% percentiles for each column. Using [`describe`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.describe.html?highlight=describe#pandas.DataFrame.describe).
+Explore the distributions by calculating the min value, max value, mean, standard deviation, and the 25% and 75% percentiles for each column. Using [`describe()`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.describe.html?highlight=describe#pandas.DataFrame.describe).
 
 ```python
 data.describe()
 ```
 
-Use matplotlib  [`.plot.hist`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.hist.html) to plot distribution of each feature.
+Use matplotlib  [`plot.hist()`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.hist.html) to plot distribution of each feature.
 
 ```python
 data["column_name"].plot.hist(bins=100)
 ```
 
-Not all graphs are great for plotting your feature, its best to explore the different types of plots that can be used e.g. [`boxplot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.boxplot.html) might be suitable for a numerical feature as the box and whisker plot helps spot outliers.
+Not all graphs are great for plotting your feature, its best to explore the different types of plots that can be used e.g. [`boxplot()`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.boxplot.html) might be suitable for a numerical feature as the box and whisker plot helps spot outliers.
 
 ```python
 data.boxplot(["column_name"])
 ```
 
-Use a correlation matrix for all features, plotting a scatter plot for each combination of numerical features. Using seaborn [`set`](https://seaborn.pydata.org/generated/seaborn.set.html) and [`pairplot`](https://seaborn.pydata.org/generated/seaborn.pairplot.html)
+Use a correlation matrix for all features, plotting a scatter plot for each combination of numerical features. Using seaborn [`set()`](https://seaborn.pydata.org/generated/seaborn.set.html) and [`pairplot()`](https://seaborn.pydata.org/generated/seaborn.pairplot.html)
 
 ```python
 numerical_data = data[["column_name_1", "column_name_2","column_name_3","column_name_4"]]
@@ -165,7 +165,7 @@ sns.set()
 grid = sns.pairplot(numerical_data)
 ```
 
-If there is some correlation between other variables. But need numbers to make a decision whether to remove some highly correlated feature. For this, seaborn [`heatmap`](https://seaborn.pydata.org/generated/seaborn.heatmap.html) is useful while using pandas [`corr`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.corr.html?highlight=corr#pandas.DataFrame.corr) to print correlations.
+If there is some correlation between other variables. But need numbers to make a decision whether to remove some highly correlated feature. For this, seaborn [`heatmap()`](https://seaborn.pydata.org/generated/seaborn.heatmap.html) is useful while using pandas [`corr()`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.corr.html?highlight=corr#pandas.DataFrame.corr) to print correlations.
 
 ```python
 corr = numerical_data.corr()
@@ -178,11 +178,11 @@ If there are variables that are highly correlated (over 99%), should try removin
 del numerical_data["column_high_correlation"]
 ```
 
-And then use [`heatmap`]() again to confirm the correlation between the variables and the target after removing the correlation.
+And then use [`heatmap()`](https://seaborn.pydata.org/generated/seaborn.heatmap.html) again to confirm the correlation between the variables and the target after removing the correlation.
 
 #### Plotting
 
-To find the distribution of the individual features with seaborn [`displot`](https://seaborn.pydata.org/generated/seaborn.displot.html) (histogram is the default generated).
+To find the distribution of the individual features with seaborn [`displot()`](https://seaborn.pydata.org/generated/seaborn.displot.html) (histogram is the default generated).
 
 ```python
 sns.displot(data[data['column_name_1'] == ?]['column_name_2'])
