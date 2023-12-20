@@ -73,15 +73,33 @@ Unfortunately, in order to no longer be blocked, the feature had to be turned of
 ```json
 {
 	"quarantineState": "[Passed|Failed]",
-	"quarantineDetails": "[json string of detailed results]"}
+	"quarantineDetails": "[json string of detailed results]"
 }
 ```
 
 Ideally, a image scanning tool like [trivy](https://trivy.dev/) would check the image and if the stage passes, the pipeline would make the API request to no longer quarantine the image.
 
+### Image built on the wrong platform
+
+When building a docker image, it's important to note what platform the docker image was built on. When using DIND you should consider the operating system (OS) that is building the image. In my case, my MacBook Pro M1 was building the docker image, which is used for deployment to Azure Kubernetes Service (AKS).
+
+Although the service run locally, without any issues. When deployed to AKS, it failed to start with:
+
+```bash
+Exec format error: '/app/.venv/bin/python'
+```
+
+This was due to an architecture mismatch [^4], because the host machine for the self-hosted build agent was using a Apple M-series chipset which is different to both ARM and x86. AKS uses a linux distribution and the docker image needed to be built for `linux/amd64`, updating the [`Dockerfile`](https://github.com/kwame-mintah/python-fastapi-azure-k8s-cluster/blob/fc9532a7103523b8770ef03651b0c0ddea3d004a/Dockerfile#L1) with the platform resolved the problem:
+
+```bash
+FROM --platform=linux/amd64
+```
+
+
 [^1]:  Overview of [Azure Container Registry](https://azure.microsoft.com/en-us/products/container-registry/)
 [^2]:  How (and Why) to Run Docker Inside Docker by [JAMES WALKER](https://www.howtogeek.com/devops/how-and-why-to-run-docker-inside-docker/)
 [^3]: Quarantine Pattern [README.md](https://github.com/Azure/acr/blob/c8ef28e6a7af36b03c0098af8014c7af07cc1cca/docs/preview/quarantine/readme.md)
+[^4]: How to Fix “[exec user process caused: exec format error](https://beebom.com/how-fix-exec-user-process-caused-exec-format-error-linux/)” in Linux
 
 ---
-#macos #azure #azure-pipelines
+#macos #azure #azure-devops #azure-pipelines #azure-container-registry
