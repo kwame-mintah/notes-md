@@ -12,6 +12,8 @@ $Big O$ is the theoretical definition of the complexity of an algorithm as a fun
 
 >Complexity is relative, it is being done relative to other algorithms solving the same problem and not all algorithms.
 
+![](/attachments/geeksforgeeks_rate_of_growth_of_algorithms.png)
+
 - $O(1)$ is read as constant time meaning takes the same amount of run time in any given case.
 - $O(log\text{ }n)$ or $O(In\text{ }n)$ is read as logarithmic or sub-linear runtime, as the amount increases the number of operations taken grows slowly and eventually flattens.
 - $O(n)$ is read as linear time meaning the number of operations taken will be the same as $n$.
@@ -100,6 +102,8 @@ def recursive_binary_search(inputs: list, target: int) -> bool:
             else:
                 return recursive_binary_search(inputs[:midpoint], target)
 ```
+
+
 
 ---
 #coding #algorithms
