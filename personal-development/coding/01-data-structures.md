@@ -53,21 +53,42 @@ class LinkedList:
 
 TBA.
 
+Python example:
+
+```python
+# Dictonary
+cars = {
+    "Volvo": "xc40",
+    "Ford": "Mustang",
+    "BMW": "8 Series",
+}
+```
+
+> [!NOTE]
+> **Collision**
+> A situation where two or more key objects produce the same final hash value.
+
+
 ## Queues
 
 TBA.
 
-## Binary Trees
+## Binary Trees / Tree Map
+
+Each node will have a key value, that will be mapped to the true value of the node. At a glance, it is a less efficient version of a HashMap. The value of the key of the left sub-tree, is less than the value of its parent (root) node's key. The value of the key on the right sub-tree os greater than or equal to the value of its parent (root) node's key.
+The benefit of using a Binary Tree over a HashMap, is that the values are ordered.
+
+## Trie / Prefix Tree
 
 TBA.
 
-## Tries
+## Heap
 
-TBA.
+A tree based data structure where parent nodes have greater than or equal to priority as their child nodes.
 
-## Heaps
-
-TBA.
+> [!NOTE]
+> **Priority Queue**
+> An abstract data type where elements have "priority" and higher priority elements are servered first. Most common implementation is the Heap.
 
 ## Graphs
 

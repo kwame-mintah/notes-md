@@ -12,11 +12,11 @@ $Big O$ is the theoretical definition of the complexity of an algorithm as a fun
 
 >Complexity is relative, it is being done relative to other algorithms solving the same problem and not all algorithms.
 
-- $O(n)$ is read as linear time meaning the number of operations taken will be the same as $n$.
 - $O(1)$ is read as constant time meaning takes the same amount of run time in any given case.
 - $O(log\text{ }n)$ or $O(In\text{ }n)$ is read as logarithmic or sub-linear runtime, as the amount increases the number of operations taken grows slowly and eventually flattens.
-- $O(n^2)$ is read as quadratic runtime ...
+- $O(n)$ is read as linear time meaning the number of operations taken will be the same as $n$.
 - $O(n\text{ }log\text{ }n)$ is read as quasi-linear meaning for every amount the number of operations increases but eventually flattens. Often seen in sorting algorithms e.g. merge sort.
+- $O(n^2)$ is read as quadratic runtime ...
 
 ## Factorial / Combinatorial
 
@@ -64,8 +64,7 @@ def binary_search(inputs: list, target: int):
     :param target: value to fine
     :return: the index location
     """
-    first = 0
-    last = len(inputs) - 1  # constant time
+    first, last = 0, len(inputs) - 1  # constant time
 
     # While loop causes the algorithm to be logarithmic runtime
     while first <= last:
@@ -78,7 +77,7 @@ def binary_search(inputs: list, target: int):
             first = midpoint + 1
         else:
             last = midpoint - 1
-    return None
+    return -1 # or None
 ```
 
 Alternatively, recursive binary search calls itself and always needs a stopping condition and the recursive function should start with the stopping condition, sometimes referred to as the base case. 
