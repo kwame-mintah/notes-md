@@ -12,6 +12,13 @@ Operations on Data Structures are the following:
 
 An array is a collection of items stored at contiguous memory locations. The idea is to store multiple items of the same type together. This makes it easier to calculate the position of each element by simply adding an offset to a base value, i.e., the memory location of the first element of the array (generally denoted by the name of the array).
 
+| Operation   | Time complexity   |
+| ----------- | ----------------- |
+| `Insert End`     | $O(1)$            |
+| `Remove End`  | $O(1)$ |
+| `Insert Mid`  | $O(1)$ |
+| `Remove Mid` | $O(1)$           |
+
 Java example:
 
 ```java
@@ -28,10 +35,16 @@ cars = ["Ford", "Volvo", 1] # 0, 1, 2
 print(cars[0]) # Ford
 ```
 
-
 ## Linked List
 
 A linked list is a linear data structure, in which the elements are not stored at contiguous memory locations. The elements in a linked list are linked using pointers, the first node is known as the head of the list and the last is known as the tail.
+
+| Operation   | Time complexity   |
+| ----------- | ----------------- |
+| `Insert End`     | $O(1)$            |
+| `Remove End`  | $O(1)$ |
+| `Insert Mid`  | $O(1)$ |
+| `Remove Mid` | $O(1)$           |
 
 Java example:
 
@@ -118,7 +131,27 @@ addList.size()  # 1
 
 ## HashMaps
 
-TBA.
+A HashMap stores items in "key/value" pairs, one object is used as a key (index) to another object (value). It makes it easy to find values that are associated with their keys. There is no difference between a dictionary and a hashmap. 
+
+| Operation  | Time complexity |
+| ---------- | --------------- |
+| `Search` | $O(1)$          |
+| `Insert` | $O(1)$          |
+| `Remove` | $O(1)$          |
+
+Java example:
+
+```java
+import java.util.HashMap;
+
+// Create a HashMap object
+HashMap<String, String> cars = new HashMap<String, String>();
+// Add keys and values
+cars.put("Volvo", "xc40");
+cars.put("Ford", "Mustang");
+cars.put("BMW", "8 Series");
+System.out.println(cars);
+```
 
 Python example:
 
@@ -129,30 +162,45 @@ cars = {
     "Ford": "Mustang",
     "BMW": "8 Series",
 }
+
+cars.get("Volvo") # Get the key and return the value e.g. xc40
+cars.get("BMW", "Vroom") # Get the key, if not found return default value e.g. Vroom
 ```
 
 > [!NOTE] 
 > **Collision**
 > A situation where two or more key objects produce the same final hash value.
 
-| Operation  | Time complexity |
-| ---------- | --------------- |
-| `search()` | $O(1)$          |
-| `insert()` | $O(1)$          |
-| `remove()` | $O(1)$          |
-
 ## Queues
 
-TBA.
+All new elements are added to the end of the queue, while the first element to be retrieved from the queue is the first added element. Queue follows the First In First Out (FIFO) rule - the item that goes in first is the item that comes out first.
+
+| Operation  | Time complexity |
+| ---------- | --------------- |
+| `Push Front` | $O(1)$          |
+| `Pop Front` | $O(1)$          |
+| `Push Back` | $O(1)$          |
+| `Pop Back` | $O(1)$          |
 
 ## Binary Trees / Tree Map
 
 Each node will have a key value, that will be mapped to the true value of the node. At a glance, it is a less efficient version of a HashMap. The value of the key of the left sub-tree, is less than the value of its parent (root) node's key. The value of the key on the right sub-tree os greater than or equal to the value of its parent (root) node's key.
 The benefit of using a Binary Tree over a HashMap, is that the values are ordered.
 
+| Operation  | Time complexity |
+| ---------- | --------------- |
+| `Insert` | $O(log\text{ }n)$          |
+| `Remove` | $O(log\text{ }n)$          |
+| `Search` | $O(log\text{ }n)$          |
+
 ## Trie / Prefix Tree
 
 TBA.
+
+| Operation  | Time complexity |
+| ---------- | --------------- |
+| `Insert` | $O(n)$          |
+| `Searc` | $O(n)$          |
 
 ## Heap
 
