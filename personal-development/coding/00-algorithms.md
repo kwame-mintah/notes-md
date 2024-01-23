@@ -110,7 +110,74 @@ def recursive_binary_search(inputs: list, target: int) -> bool:
                 return recursive_binary_search(inputs[:midpoint], target)
 ```
 
+## Backtracking 
 
+Backtracking can be defined as a general algorithmic technique that considers searching every possible combination in order to solve a computational problem.
+
+In backtracking, you start with one pos­si­ble move out of many avail­able moves. You then then try to solve the prob­lem. If you are able to solve the prob­lem with the selected move then you will return the solution. Else you will back­track and select some other move and try to solve it.
+
+If none of the moves works out then there is no solution for the problem.
+
+## Depth-first search (DFS)
+
+Depth-first search (DFS) is a technique used for traversing trees or graphs. Backtracking is used for traversal. In the traversal first, the deepest node is visited and then backtracks to its parent node if no sibling of that node exists
+
+The algorithm begins at the root node and then it explores each branch before _backtracking_. By using recursion you take advantage of the fact that left and right subtrees are also trees and share the same properties.
+
+For Binary trees, there are three types of DFS traversals.
+
+- In-Order:
+	- Start at the left subtree of the root node, then to the root node, and lastly the right subtree of the root node.
+- Pre-Order:
+	- Start at the root node, then the left subtree of the root node, and at last  the right subtree of the root node.
+- Post-Order:
+	-  Start at the left subtree nodes first and then traverse to the right subtree and visit nodes in it, and lastly process the current node. 
+
+Example binary tree: `[5,4,8,11,null,13,4,7,2,null,null,5,1]`
+
+```
+        5         
+       / \        
+      4     8     
+     /     / \    
+  11     13    4  
+ /  \         / \ 
+7    2       5   1
+```
+
+In-Order: 7 -> 11 -> 2 -> 4 -> 5 -> 5 -> 4 -> 1 -> 13 -> 8
+Pre-Order: 5 -> 4 -> 11 -> 7 -> 2 -> 8 -> 13 -> 4 -> 5 -> 1
+Post-Order: 7 -> 2 -> 5 -> 1 -> 11 -> 13 -> 4 -> 4 -> 8 -> 5
+
+> [!NOTE]
+> Time complexity: In all the traversals, we visit every node once. It takes $O(1)$ time to visit a node; hence, the time complexity of all the traversals will be $O(n)$. Thus, the time complexity is $O(n)$ for all traversals. 
+
+```python
+# In-Order
+def in_order(root=None):
+	if not root:
+        return 0
+	else:
+        in_order(root.left)
+        print(root.val, end=" ")
+        in_order(root.right)
+# Pre-Order
+def pre_order(root):
+    if not root:
+        return 0
+    else:
+	   print(root.value, end=" ")
+	   pre_order(root.left)
+	   pre_order(root.right)
+# Post-Order
+def post_order(root=None):
+    if not root:
+        return 0
+	else:
+		post_order(root.left)
+		post_order(root.right)
+		print(root.val, end=" ")
+```
 
 ---
 #coding #algorithms
