@@ -1,3 +1,6 @@
 # Obsidian.md configuration files
 .obsidian
 NOTES*.md
+
+# Commit hooks etc
+.pre-commit-config.yaml
