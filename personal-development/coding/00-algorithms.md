@@ -179,5 +179,58 @@ def post_order(root=None):
 		print(root.val, end=" ")
 ```
 
+## Breadth-first search (BFS)
+
+Level Order Traversal technique is defined as a method to traverse a Tree such that all nodes present in the same level are traversed completely before traversing the next level. Breadth First Traversal or Breadth First Search is a recursive algorithm for searching all the vertices of a graph or tree data structure.
+
+The algorithm works as follows:
+
+1. Start by putting any one of the graph's vertices at the back of a queue.
+2. Take the front item of the queue and add it to the visited list.
+3. Create a list of that vertex's adjacent nodes. Add the ones which aren't in the visited list to the back of the queue.
+4. Keep repeating steps 2 and 3 until the queue is empty.
+
+Example binary tree: `[3,9,20,null,null,15,7]`
+
+```
+  3      
+ / \     
+9    20  
+    /  \ 
+   15   7
+```
+
+The order of traversal would be: 3 -> 9 -> 20 -> 15 -> 7. Each level would be traversed starting from the top. There are a total of 3 levels.
+
+> [!NOTE]
+> Time Complexity: $O(N)$ where $N$ is the number of nodes in the binary tree.
+> Auxiliary Space: $O(N)$ where $N$ is the number of nodes in the binary tree.
+
+```python
+    def maxDepth(root: Optional[TreeNode]) -> int:
+        # Base case (stopping condition)
+        if not root:
+            return 0
+
+        depth = 0  # The root node
+        # Breadth-first search a.k.a (level order traversal)
+        queue = deque([root])
+        while queue:
+            for i in range(len(queue)):
+				# remove from the queue
+				# note: popleft() O(1) vs pop() O(n)
+                node = queue.popleft()
+                if node.left:
+		            # Enqueue O(1) (Add) left child to queue
+                    queue.append(node.left)
+                if node.right:
+					# Enqueue O(1) (add) right child to queue
+                    queue.append(node.right)
+            depth += 1
+        print(depth)
+        return depth
+```
+
+
 ---
 #coding #algorithms
