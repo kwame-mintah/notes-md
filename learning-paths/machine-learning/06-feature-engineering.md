@@ -16,7 +16,7 @@ To use SageMaker Processing, simply supply a Python data preprocessing script.  
 If your dataset contains a feature, which is a binary variable. It is possible to change the encoding from `'Y'` and `'N'` to `1` and `0`. This can be done using [`map`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.map.html), it expects either a function to apply to that column or a dictionary to look up the correct transformation.
 
 ```python
-new_data['column_name'] = data['column_name'].map({'Y':1, 'N':0})
+new_data["column_name"] = data["column_name"].map({"Y": 1, "N": 0})
 ```
 
 ### Ordinal categorical
@@ -24,7 +24,9 @@ new_data['column_name'] = data['column_name'].map({'Y':1, 'N':0})
 Same as above, but encoding many categorical variables. This is ideal if the feature can be thought of as an ordinal categorical variable.
 
 ```python
-new_data['column_name'] = df['column_name'].map({'Poor':1, 'Fair':2, 'Average':3, 'Good':4, 'Very Good':5})
+new_data["column_name"] = df["column_name"].map(
+    {"Poor": 1, "Fair": 2, "Average": 3, "Good": 4, "Very Good": 5}
+)
 ```
 
 ### Nominal categorical
@@ -43,22 +45,26 @@ TBA.
 ```python
 sess = sagemaker.Session()
 
-xgb = sagemaker.estimator.Estimator(container,
-                                    role, 
-                                    instance_count=1, 
-                                    instance_type='ml.m6.xlarge',
-                                    output_path='s3://{}/{}/output'.format(bucket, prefix),
-                                    sagemaker_session=sess)
-xgb.set_hyperparameters(max_depth=5,
-                        eta=0.2,
-                        gamma=4,
-                        min_child_weight=6,
-                        subsample=0.8,
-                        silent=0,
-                        objective='binary:logistic',
-                        num_round=100)
+xgb = sagemaker.estimator.Estimator(
+    container,
+    role,
+    instance_count=1,
+    instance_type="ml.m6.xlarge",
+    output_path="s3://{}/{}/output".format(bucket, prefix),
+    sagemaker_session=sess,
+)
+xgb.set_hyperparameters(
+    max_depth=5,
+    eta=0.2,
+    gamma=4,
+    min_child_weight=6,
+    subsample=0.8,
+    silent=0,
+    objective="binary:logistic",
+    num_round=100,
+)
 
-xgb.fit({'train': s3_input_train, 'validation': s3_input_validation})
+xgb.fit({"train": s3_input_train, "validation": s3_input_validation})
 ```
 
 > [!NOTE]

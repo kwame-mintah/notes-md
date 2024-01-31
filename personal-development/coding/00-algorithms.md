@@ -86,7 +86,7 @@ def binary_search(inputs: list, target: int):
             first = midpoint + 1
         else:
             last = midpoint - 1
-    return -1 # or None
+    return -1  # or None
 ```
 
 Alternatively, recursive binary search calls itself and always needs a stopping condition and the recursive function should start with the stopping condition, sometimes referred to as the base case. 
@@ -96,16 +96,16 @@ Python example:
 ```python
 def recursive_binary_search(inputs: list, target: int) -> bool:
     if len(inputs) == 0:
-    # 1st stopping condition what should happen when empty list provided
+        # 1st stopping condition what should happen when empty list provided
         return False
     else:
         midpoint = (len(inputs)) // 2
         if inputs[midpoint] == target:
-        # 2nd stopping condition checking midpoint and target
+            # 2nd stopping condition checking midpoint and target
             return True
         else:
             if inputs[midpoint] < target:
-                return recursive_binary_search(inputs[midpoint + 1:], target)
+                return recursive_binary_search(inputs[midpoint + 1 :], target)
             else:
                 return recursive_binary_search(inputs[:midpoint], target)
 ```
@@ -153,30 +153,31 @@ Post-Order: 7 -> 2 -> 5 -> 1 -> 11 -> 13 -> 4 -> 4 -> 8 -> 5
 > Time complexity: In all the traversals, we visit every node once. It takes $O(1)$ time to visit a node; hence, the time complexity of all the traversals will be $O(n)$. Thus, the time complexity is $O(n)$ for all traversals. 
 
 ```python
-# In-Order
 def in_order(root=None):
-	if not root:
+    if not root:
         return 0
-	else:
+    else:
         in_order(root.left)
         print(root.val, end=" ")
         in_order(root.right)
-# Pre-Order
+
+
 def pre_order(root):
     if not root:
         return 0
     else:
-	   print(root.value, end=" ")
-	   pre_order(root.left)
-	   pre_order(root.right)
-# Post-Order
+        print(root.value, end=" ")
+        pre_order(root.left)
+        pre_order(root.right)
+
+
 def post_order(root=None):
     if not root:
         return 0
-	else:
-		post_order(root.left)
-		post_order(root.right)
-		print(root.val, end=" ")
+    else:
+        post_order(root.left)
+        post_order(root.right)
+        print(root.val, end=" ")
 ```
 
 ## Breadth-first search (BFS)
@@ -207,28 +208,28 @@ The order of traversal would be: 3 -> 9 -> 20 -> 15 -> 7. Each level would be tr
 > Auxiliary Space: $O(N)$ where $N$ is the number of nodes in the binary tree.
 
 ```python
-    def maxDepth(root: Optional[TreeNode]) -> int:
-        # Base case (stopping condition)
-        if not root:
-            return 0
+def maxDepth(root: Optional[TreeNode]) -> int:
+    # Base case (stopping condition)
+    if not root:
+        return 0
 
-        depth = 0  # The root node
-        # Breadth-first search a.k.a (level order traversal)
-        queue = deque([root])
-        while queue:
-            for i in range(len(queue)):
-				# remove from the queue
-				# note: popleft() O(1) vs pop() O(n)
-                node = queue.popleft()
-                if node.left:
-		            # Enqueue O(1) (Add) left child to queue
-                    queue.append(node.left)
-                if node.right:
-					# Enqueue O(1) (add) right child to queue
-                    queue.append(node.right)
-            depth += 1
-        print(depth)
-        return depth
+    depth = 0  # The root node
+    # Breadth-first search a.k.a (level order traversal)
+    queue = deque([root])
+    while queue:
+        for i in range(len(queue)):
+            # remove from the queue
+            # note: popleft() O(1) vs pop() O(n)
+            node = queue.popleft()
+            if node.left:
+                # Enqueue O(1) (Add) left child to queue
+                queue.append(node.left)
+            if node.right:
+                # Enqueue O(1) (add) right child to queue
+                queue.append(node.right)
+        depth += 1
+    print(depth)
+    return depth
 ```
 
 

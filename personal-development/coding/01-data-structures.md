@@ -32,8 +32,8 @@ Python example:
 ```python
 # Arrays in python are `list` which are heterogeneous (mixed) containing
 # any type of value.
-cars = ["Ford", "Volvo", 1] # 0, 1, 2
-print(cars[0]) # Ford
+cars = ["Ford", "Volvo", 1]  # 0, 1, 2
+print(cars[0])  # Ford
 ```
 
 ## Linked List
@@ -69,6 +69,7 @@ class Node:
     An object for storing a single node of  linked list.
     Models two attributes - item and link to the next node in the list.
     """
+
     data = None
     next_node = None
 
@@ -164,8 +165,8 @@ cars = {
     "BMW": "8 Series",
 }
 
-cars.get("Volvo") # Get the key and return the value e.g. xc40
-cars.get("BMW", "Vroom") # Get the key, if not found return default value e.g. Vroom
+cars.get("Volvo")  # Get the key and return the value e.g. xc40
+cars.get("BMW", "Vroom")  # Get the key, if not found return default value e.g. Vroom
 ```
 
 > [!NOTE]
