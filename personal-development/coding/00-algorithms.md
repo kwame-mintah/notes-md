@@ -10,22 +10,22 @@ A set of steps or instructions for completing a task. Alternatively, a set of st
 
 $Big O$ is the theoretical definition of the complexity of an algorithm as a function of the size. In simple terms, $Big O$ is a notation used to describe complexity, essentially simplifying everything into a single variable. It is often written as $O(n)$ , O meaning the order of magnitude of complexity. A function of the size, measuring complexity as the input size grows, evaluating how it performs in the worse case scenario (Upper bounds).
 
->Complexity is relative, it is being done relative to other algorithms solving the same problem and not all algorithms.
+>Complexity is relative, it is relative to other algorithms solving the same problem and not all algorithms.
 
 ![](/attachments/geeksforgeeks_rate_of_growth_of_algorithms.png)
 
-- $O(1)$ is read as constant time meaning takes the same amount of run time in any given case.
+- $O(1)$ is read as constant time so it takes the same amount of run time in any given case.
 - $O(log\text{ }n)$ or $O(In\text{ }n)$ is read as logarithmic or sub-linear runtime, as the amount increases the number of operations taken grows slowly and eventually flattens.
 - $O(n)$ is read as linear time meaning the number of operations taken will be the same as $n$.
 - $O(n\text{ }log\text{ }n)$ is read as quasi-linear meaning for every amount the number of operations increases but eventually flattens. Often seen in sorting algorithms e.g. merge sort.
-- $O(n^2)$ is read as quadratic runtime ...
+- $O(n^2)$ is read as quadratic runtime, when you perform nested iteration, meaning having a loop in a loop, the time complexity is quadratic.
 
 ## Factorial / Combinatorial
 
-Factorial is written as $n!$ which is $n$ minus one repeated until you reach the number one.
+Factorial is written as $O(n!)$ which is $n$ minus one repeated until you reach the number one.
 $$n!\text{ }n(n-1)(n-2)..(2)(1)$$
 For example $3!$ is: $$3 * 2 * 1 = 6 $$
-The runtime for the algorithm will be represented as $O(n!)$ 
+The runtime for the algorithm will be represented as $O(n!)$
 
 > [!NOTE]
 > - When the calculation is not dependent on input size, it is a constant time complexity ($O(1)$).
@@ -61,7 +61,7 @@ def linear_search(inputs: list, target: int):
 
 ## Binary search
 
-Binary search wouldn't return the target value, instead return the position in the list were the target is and complexity notation is $O(log\text{ }n)$. The input list must be sorted and returns some sort of value to indicate that the target does not exist within the input.
+Binary search wouldn't return the target value, instead returns the position in the list were the target is and complexity notation is $O(log\text{ }n)$ logarithmic time. The input list must be sorted and returns some sort of value to indicate that the target does not exist within the input.
 
 Python example:
 
@@ -89,7 +89,7 @@ def binary_search(inputs: list, target: int):
     return -1  # or None
 ```
 
-Alternatively, recursive binary search calls itself and always needs a stopping condition and the recursive function should start with the stopping condition, sometimes referred to as the base case. 
+Alternatively, recursive binary search calls itself and needs a stopping condition and the recursive function should start with the stopping condition, sometimes referred to as the base case. 
 
 Python example:
 
@@ -129,7 +129,7 @@ For Binary trees, there are three types of DFS traversals.
 - In-Order:
 	- Start at the left subtree of the root node, then to the root node, and lastly the right subtree of the root node.
 - Pre-Order:
-	- Start at the root node, then the left subtree of the root node, and at last  the right subtree of the root node.
+	- Start at the root node, then the left subtree of the root node, and at last the right subtree of the root node.
 - Post-Order:
 	-  Start at the left subtree nodes first and then traverse to the right subtree and visit nodes in it, and lastly process the current node. 
 
@@ -151,6 +151,8 @@ Post-Order: 7 -> 2 -> 5 -> 1 -> 11 -> 13 -> 4 -> 4 -> 8 -> 5
 
 > [!NOTE]
 > Time complexity: In all the traversals, we visit every node once. It takes $O(1)$ time to visit a node; hence, the time complexity of all the traversals will be $O(n)$. Thus, the time complexity is $O(n)$ for all traversals. 
+
+Python example:
 
 ```python
 def in_order(root=None):
@@ -201,13 +203,18 @@ Example binary tree: `[3,9,20,null,null,15,7]`
    15   7
 ```
 
-The order of traversal would be: 3 -> 9 -> 20 -> 15 -> 7. Each level would be traversed starting from the top. There are a total of 3 levels.
+The order of traversal would be: 3 -> 9 -> 20 -> 15 -> 7. Each level would be traversed starting from the top. In the example tree, there are a total of 3 levels.
 
 > [!NOTE]
-> Time Complexity: $O(N)$ where $N$ is the number of nodes in the binary tree.
-> Auxiliary Space: $O(N)$ where $N$ is the number of nodes in the binary tree.
+> Time Complexity: $O(n)$ where $n$ is the number of nodes in the binary tree.
+> Auxiliary Space: $O(n)$ where $n$ is the number of nodes in the binary tree.
+
+Python example:
 
 ```python
+from collections import deque
+
+
 def maxDepth(root: Optional[TreeNode]) -> int:
     # Base case (stopping condition)
     if not root:
