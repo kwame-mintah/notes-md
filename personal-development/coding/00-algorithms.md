@@ -215,6 +215,22 @@ Python example:
 from collections import deque
 
 
+def breadth_first_search(graph, node):
+    visited = []
+    queue = deque()
+    visited.append(node)
+    queue.append(node)
+
+    while queue:
+        node = queue.pop(0)
+        print(m, end=" ")
+
+        for neighbor in graph[node]:
+            if neighbor not in visited:
+                visited.append(neighbor)
+                queue.append(neighbor)
+
+
 def maxDepth(root: Optional[TreeNode]) -> int:
     # Base case (stopping condition)
     if not root:
