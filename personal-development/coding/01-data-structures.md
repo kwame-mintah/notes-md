@@ -169,6 +169,17 @@ cars.get("Volvo")  # Get the key and return the value e.g. xc40
 cars.get("BMW", "Vroom")  # Get the key, if not found return default value e.g. Vroom
 ```
 
+In python, can ask the following questions to determine, when to use `list`, `dict` or `set` [^1] :
+
+- Do you just need an ordered sequence of items? Go for a `list`.
+- Do you just need to know whether or not you've already got a particular value, but without ordering (and you don't need to store duplicates)? Use a `set`.
+- Do you need to associate values with keys, so you can look them up efficiently (by key) later on? Use a `dict`.
+
+- **[List](https://www.w3schools.com/python/python_lists.asp)** is a collection which is ordered and changeable. Allows duplicate members.
+- **[Tuple](https://www.w3schools.com/python/python_tuples.asp)** is a collection which is ordered and unchangeable. Allows duplicate members.
+- **[Set](https://www.w3schools.com/python/python_sets.asp)** is a collection which is unordered, unchangeable*, and unindexed. No duplicate members.
+- **[Dictionary](https://www.w3schools.com/python/python_dictionaries.asp)** is a collection which is ordered and changeable. No duplicate members.
+
 > [!NOTE]
 > **Collision**
 > A situation where two or more key objects produce the same final hash value.
@@ -211,7 +222,8 @@ A tree based data structure where parent nodes have greater than or equal to pri
 - Max-Heap: In this heap, the value of the root node must be the greatest among all its child nodes and the same thing must be done for its left and right sub-tree also.
 - Min-Heap: In this heap, the value of the root node must be the smallest among all its child nodes and the same thing must be done for its left and right sub-tree also.
 
-> [!NOTE] > **Priority Queue**
+> [!NOTE] 
+> **Priority Queue**
 > An abstract data type where elements have "priority" and higher priority elements are severed first. Most common implementation is the Heap.
 
 | Operation   | Time complexity   |
@@ -224,6 +236,9 @@ A tree based data structure where parent nodes have greater than or equal to pri
 ## Graphs
 
 TBA.
+
+
+[^1]: In Python, when to use a Dictionary, List or Set? [Jon Skeet](https://stackoverflow.com/a/3489078)
 
 ---
 
