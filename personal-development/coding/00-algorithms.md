@@ -214,21 +214,22 @@ Python example:
 ```python
 from collections import deque
 
-
-def breadth_first_search(graph, node):
-    visited = []
-    queue = deque()
-    visited.append(node)
-    queue.append(node)
+# Binary Tree
+def breadth_first_search(root: Optional[TreeNode]):
+    queue = deque([root])
+    ans = 0
 
     while queue:
-        node = queue.pop(0)
-        print(m, end=" ")
+        # do logic for current level
+        for i in range(len(queue)):
+            node = queue.popleft()
+            # do logic
+            if node.left:
+                queue.append(node.left)
+            if node.right:
+                queue.append(node.right)
 
-        for neighbor in graph[node]:
-            if neighbor not in visited:
-                visited.append(neighbor)
-                queue.append(neighbor)
+    return ans
 
 
 def maxDepth(root: Optional[TreeNode]) -> int:
@@ -253,6 +254,23 @@ def maxDepth(root: Optional[TreeNode]) -> int:
         depth += 1
     print(depth)
     return depth
+
+
+# Graph BFS
+def breadth_first_search(graph, node):
+    visited = []
+    queue = deque()
+    visited.append(node)
+    queue.append(node)
+
+    while queue:
+        node = queue.pop(0)
+        print(m, end=" ")
+
+        for neighbor in graph[node]:
+            if neighbor not in visited:
+                visited.append(neighbor)
+                queue.append(neighbor)
 ```
 
 
