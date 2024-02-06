@@ -2,7 +2,7 @@
 
 A set of steps or instructions for completing a task. Alternatively, a set of steps a program takes to finish a task. Algorithms should produce a result, meaning they should complete and not take an infinite amount of time.
 
-> [!NOTE]
+> [!NOTE] 
 > **Algorithm**
 > Clearly defined problem statement, input, and output. The steps in the algorithm need to be in a very specific order. And these steps need to be distinct, should not be able to break down into further sub-tasks. Lastly, the algorithm should produce a result.
 
@@ -10,7 +10,7 @@ A set of steps or instructions for completing a task. Alternatively, a set of st
 
 $Big O$ is the theoretical definition of the complexity of an algorithm as a function of the size. In simple terms, $Big O$ is a notation used to describe complexity, essentially simplifying everything into a single variable. It is often written as $O(n)$ , O meaning the order of magnitude of complexity. A function of the size, measuring complexity as the input size grows, evaluating how it performs in the worse case scenario (Upper bounds).
 
->Complexity is relative, it is relative to other algorithms solving the same problem and not all algorithms.
+> Complexity is relative, it is relative to other algorithms solving the same problem and not all algorithms.
 
 ![](/attachments/geeksforgeeks_rate_of_growth_of_algorithms.png)
 
@@ -28,6 +28,7 @@ For example $3!$ is: $$3 * 2 * 1 = 6 $$
 The runtime for the algorithm will be represented as $O(n!)$
 
 > [!NOTE]
+>
 > - When the calculation is not dependent on input size, it is a constant time complexity ($O(1)$).
 > - When the input size is reduced by half, when iterating, handling recursion, or whatsoever, it is a logarithmic time complexity ($O(log n)$).
 > - When you have a single loop within your algorithm, it is linear time complexity ($O(n)$).
@@ -38,7 +39,7 @@ The runtime for the algorithm will be represented as $O(n!)$
 
 No solution works on every problem and it is important is to clearly define what the problem set is and clarify what values count as inputs.
 
-## Linear / Sequential search 
+## Linear / Sequential search
 
 For linear search it can be described as a series of values and the output is a value matching the one we're looking for, it does not matter if the values have been sorted, because it progresses sequentially checking every value and complexity notation is $O(n)$. The result could be nothing, indicating the value could not be found, which is okay.
 
@@ -89,7 +90,7 @@ def binary_search(inputs: list, target: int):
     return -1  # or None
 ```
 
-Alternatively, recursive binary search calls itself and needs a stopping condition and the recursive function should start with the stopping condition, sometimes referred to as the base case. 
+Alternatively, recursive binary search calls itself and needs a stopping condition and the recursive function should start with the stopping condition, sometimes referred to as the base case.
 
 Python example:
 
@@ -110,7 +111,7 @@ def recursive_binary_search(inputs: list, target: int) -> bool:
                 return recursive_binary_search(inputs[:midpoint], target)
 ```
 
-## Backtracking 
+## Backtracking
 
 Backtracking can be defined as a general algorithmic technique that considers searching every possible combination in order to solve a computational problem.
 
@@ -127,21 +128,21 @@ The algorithm begins at the root node and then it explores each branch before _b
 For Binary trees, there are three types of DFS traversals.
 
 - In-Order:
-	- Start at the left subtree of the root node, then to the root node, and lastly the right subtree of the root node.
+  - Start at the left subtree of the root node, then to the root node, and lastly the right subtree of the root node.
 - Pre-Order:
-	- Start at the root node, then the left subtree of the root node, and at last the right subtree of the root node.
+  - Start at the root node, then the left subtree of the root node, and at last the right subtree of the root node.
 - Post-Order:
-	-  Start at the left subtree nodes first and then traverse to the right subtree and visit nodes in it, and lastly process the current node. 
+  - Start at the left subtree nodes first and then traverse to the right subtree and visit nodes in it, and lastly process the current node.
 
 Example binary tree: `[5,4,8,11,null,13,4,7,2,null,null,5,1]`
 
 ```
-        5         
-       / \        
-      4     8     
-     /     / \    
-  11     13    4  
- /  \         / \ 
+        5
+       / \
+      4     8
+     /     / \
+  11     13    4
+ /  \         / \
 7    2       5   1
 ```
 
@@ -150,7 +151,7 @@ Pre-Order: 5 -> 4 -> 11 -> 7 -> 2 -> 8 -> 13 -> 4 -> 5 -> 1
 Post-Order: 7 -> 2 -> 5 -> 1 -> 11 -> 13 -> 4 -> 4 -> 8 -> 5
 
 > [!NOTE]
-> Time complexity: In all the traversals, we visit every node once. It takes $O(1)$ time to visit a node; hence, the time complexity of all the traversals will be $O(n)$. Thus, the time complexity is $O(n)$ for all traversals. 
+> Time complexity: In all the traversals, we visit every node once. It takes $O(1)$ time to visit a node; hence, the time complexity of all the traversals will be $O(n)$. Thus, the time complexity is $O(n)$ for all traversals.
 
 Python example:
 
@@ -196,10 +197,10 @@ The algorithm works as follows:
 Example binary tree: `[3,9,20,null,null,15,7]`
 
 ```
-  3      
- / \     
-9    20  
-    /  \ 
+  3
+ / \
+9    20
+    /  \
    15   7
 ```
 
@@ -256,23 +257,38 @@ def maxDepth(root: Optional[TreeNode]) -> int:
     return depth
 
 
-# Graph BFS
-def breadth_first_search(graph, node):
+# Breadth first search for graphs
+def breadth_first_search(graph, root):
     visited = []
-    queue = deque()
-    visited.append(node)
-    queue.append(node)
+    queue = deque([root])
 
     while queue:
-        node = queue.pop(0)
-        print(m, end=" ")
-
-        for neighbor in graph[node]:
+        vertex = queue.popleft()
+        print(vertex, end=" ")
+        for neighbor in graph[vertex]:
             if neighbor not in visited:
-                visited.append(neighbor)
+                visited.append(vertex)
                 queue.append(neighbor)
+    print(visited)
+
+
+# breadth_first_search({0: [1, 2], 1: [2,3,0], 2: [3,1,0], 3: [1, 2]}, 0)
+
+# Converting list of vertex (edges) to list graph
+def build_graph(edges):
+    graph = {}
+    for edge in edges:
+        start, adjacent = edge
+        if start not in graph:
+            graph[start] = []
+        if adjacent not in graph:
+            graph[adjacent] = []
+        graph[start].append(adjacent)
+        graph[adjacent].append(start)
+
+    return graph  # {0: [1, 2], 1: [0, 2], 2: [1, 0]}
 ```
 
-
 ---
+
 #coding #algorithms
