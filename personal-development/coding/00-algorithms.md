@@ -8,11 +8,11 @@ A set of steps or instructions for completing a task. Alternatively, a set of st
 
 ## Big O
 
-$Big O$ is the theoretical definition of the complexity of an algorithm as a function of the size. In simple terms, $Big O$ is a notation used to describe complexity, essentially simplifying everything into a single variable. It is often written as $O(n)$ , O meaning the order of magnitude of complexity. A function of the size, measuring complexity as the input size grows, evaluating how it performs in the worse case scenario (Upper bounds).
+$Big O$ is the theoretical definition of the complexity of an algorithm as a function of the size. In simple terms, $Big O$ is a notation used to describe complexity, essentially simplifying everything into a single variable. It is often written as $O(n)$, O meaning the order of magnitude of complexity. $n$ as function of the size, measuring complexity as the input size grows, evaluating how it performs in the worse case scenario (Upper bounds).
 
 > Complexity is relative, it is relative to other algorithms solving the same problem and not all algorithms.
 
-![](/attachments/geeksforgeeks_rate_of_growth_of_algorithms.png)
+![](/attachments/big-o-complexity-chart-by-bigocheatsheet.png)
 
 - $O(1)$ is read as constant time so it takes the same amount of run time in any given case.
 - $O(log\text{ }n)$ or $O(In\text{ }n)$ is read as logarithmic or sub-linear runtime, as the amount increases the number of operations taken grows slowly and eventually flattens.
@@ -30,7 +30,7 @@ The runtime for the algorithm will be represented as $O(n!)$
 > [!NOTE]
 >
 > - When the calculation is not dependent on input size, it is a constant time complexity ($O(1)$).
-> - When the input size is reduced by half, when iterating, handling recursion, or whatsoever, it is a logarithmic time complexity ($O(log n)$).
+> - When the input size is reduced by half, when iterating, handling recursion, or whatsoever, it is a logarithmic time complexity ($O(log\text{ }n)$).
 > - When you have a single loop within your algorithm, it is linear time complexity ($O(n)$).
 > - When you have nested loops within your algorithm, meaning a loop in a loop, it is quadratic time complexity ($O(n^2)$).
 > - When the growth rate doubles with each addition to the input, it is exponential time complexity ($O(2^n)$).
@@ -121,7 +121,7 @@ If none of the moves works out then there is no solution for the problem.
 
 ## Depth-first search (DFS)
 
-Depth-first search (DFS) is a technique used for traversing trees or graphs. Backtracking is used for traversal. In the traversal first, the deepest node is visited and then backtracks to its parent node if no sibling of that node exists
+Depth-first search (DFS) is a technique used for traversing trees or graphs. Backtracking is used for traversal. In the first traversal, the deepest node is visited and then backtracks to its parent node if no sibling of that node exists
 
 The algorithm begins at the root node and then it explores each branch before _backtracking_. By using recursion you take advantage of the fact that left and right subtrees are also trees and share the same properties.
 
@@ -204,7 +204,7 @@ Example binary tree: `[3,9,20,null,null,15,7]`
    15   7
 ```
 
-The order of traversal would be: 3 -> 9 -> 20 -> 15 -> 7. Each level would be traversed starting from the top. In the example tree, there are a total of 3 levels.
+The order of traversal would be: [3] -> [9 -> 20] -> [15 -> 7]. Each level would be traversed starting from the top. In the example tree, there are a total of 3 levels.
 
 > [!NOTE]
 > Time Complexity: $O(n)$ where $n$ is the number of nodes in the binary tree.
@@ -216,14 +216,19 @@ Python example:
 from collections import deque
 
 # Binary Tree
-def breadth_first_search(root: Optional[TreeNode]):
+def breadth_first_search_tree(root: Optional[TreeNode]):
     queue = deque([root])
     ans = 0
 
+    # Base case (stopping condition)
+    if not root:
+        return 0
+
     while queue:
+        node = queue.popleft()
+        print(node.value, end=" ")
         # do logic for current level
         for i in range(len(queue)):
-            node = queue.popleft()
             # do logic
             if node.left:
                 queue.append(node.left)
@@ -233,7 +238,7 @@ def breadth_first_search(root: Optional[TreeNode]):
     return ans
 
 
-def maxDepth(root: Optional[TreeNode]) -> int:
+def bfs_max_depth(root: Optional[TreeNode]) -> int:
     # Base case (stopping condition)
     if not root:
         return 0
@@ -258,16 +263,19 @@ def maxDepth(root: Optional[TreeNode]) -> int:
 
 
 # Breadth first search for graphs
-def breadth_first_search(graph, root):
+def breadth_first_search_graph(graph: List[List[int]], start: int):
+    if not graph:
+        return None
+
     visited = []
-    queue = deque([root])
+    queue = deque([graph])
 
     while queue:
         vertex = queue.popleft()
         print(vertex, end=" ")
         for neighbor in graph[vertex]:
             if neighbor not in visited:
-                visited.append(vertex)
+                visited.append(neighbor)
                 queue.append(neighbor)
     print(visited)
 
