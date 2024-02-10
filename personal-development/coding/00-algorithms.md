@@ -121,13 +121,13 @@ If none of the moves works out then there is no solution for the problem.
 
 ## Depth-first search (DFS)
 
-Depth-first search (DFS) is a technique used for traversing trees or graphs. Backtracking is used for traversal. In the first traversal, the deepest node is visited and then backtracks to its parent node if no sibling of that node exists
+Depth-first search (DFS) is a technique used for traversing trees or graphs. Backtracking is used for traversal. In the first traversal, the deepest node is visited and then backtracks to its parent node if no sibling of that node exists.
 
-The algorithm begins at the root node and then it explores each branch before _backtracking_. By using recursion you take advantage of the fact that left and right subtrees are also trees and share the same properties.
+The algorithm begins at the root node and then it explores each branch before _backtracking_. By using recursion you take advantage of the fact that left and right subtrees are also trees and share the same properties. This is done using stacks.
 
 For Binary trees, there are three types of DFS traversals.
 
-- In-Order:
+- In-Order (for binary trees only):
   - Start at the left subtree of the root node, then to the root node, and lastly the right subtree of the root node.
 - Pre-Order:
   - Start at the root node, then the left subtree of the root node, and at last the right subtree of the root node.
@@ -181,6 +181,24 @@ def post_order(root=None):
         post_order(root.left)
         post_order(root.right)
         print(root.val, end=" ")
+
+
+# Depth first search for graphs (recursive implementation)
+# the DFS algorithm starts by putting it in the Visited list and
+# putting all its adjacent vertices in the stack.
+def dfs(graph, start, visited=None):
+    if visited is None:
+        visited = set()
+    visited.add(start)  # This will add to the front of the stack
+
+    print(start)
+
+    for next in graph[start] - visited:
+        dfs(graph, next, visited)
+    return visited
+
+
+# The space complexity of the algorithm is `O(V)`
 ```
 
 ## Breadth-first search (BFS)
@@ -267,7 +285,7 @@ def breadth_first_search_graph(graph: List[List[int]], start: int):
     if not graph:
         return None
 
-    visited = []
+    visited = []  # OR set()
     queue = deque([graph])
 
     while queue:
@@ -296,6 +314,13 @@ def build_graph(edges):
 
     return graph  # {0: [1, 2], 1: [0, 2], 2: [1, 0]}
 ```
+
+>  **BFS pseudocode**
+>  create a queue `Q` 
+>  mark vertex `v` as visited and put `v` into Q 
+	while `Q` is not empty 
+	    remove first vertex in the `Q` 
+	    mark and add all (unvisited) neighbours of u
 
 ---
 
