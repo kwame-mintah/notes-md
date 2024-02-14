@@ -99,9 +99,9 @@ The following checks from [`checkov`](https://www.checkov.io/) and [`tfsec`](htt
 | aws-iam-no-policy-wildcards  | TBD         | Ignored as the SageMaker notebook needs access to a lot of actions.      |
 | aws-vpc-no-public-egress-sgr | TBD         | SageMaker needs access to the internet to trigger training jobs (**?**). |
 
-### Task list:
+### Task list
 
-- [ ] Create VPC log (https://docs.paloaltonetworks.com/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/aws-policies/aws-logging-policies/logging-9-enable-vpc-flow-logging, https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/flow_log)
+- [ ] Create VPC log (<https://docs.paloaltonetworks.com/prisma/prisma-cloud/prisma-cloud-code-security-policy-reference/aws-policies/aws-logging-policies/logging-9-enable-vpc-flow-logging>, <https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/flow_log>)
 
 [^1]: Potentially have a training job that are ready in stable environments, like staging and production?
 [^2]: There are two types of endpoints: provisioned or serverless. Provisioned allows for a production and shadow variant, while serverless only allows production.

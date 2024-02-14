@@ -1,8 +1,9 @@
-# Data preprocessing 
+# Data preprocessing
 
 The first rule in preprocessing is: **know your data!**
 
 The **TBLF** approach is suggested:
+
 + **Try:** Explore the problem (in this case, explore your data)
 + **Broken?:** What is broken? (Do you see something wrong in your data)
 + **Learn:** Why is it wrong? (What is wrong with this data? How can you solve it?)
@@ -22,7 +23,7 @@ Read the comma-separated values (`.csv`) file using pandas [`read_csv()`](https:
 print("Number of features: {}".format(data.shape[1]))
 ```
 
-Then check how much data [^2] is in the dataset 
+Then check how much data [^2] is in the dataset
 
 ```python
 print("Number of samples: {}".format(data.shape[0]))
@@ -43,11 +44,11 @@ data.info()
 It's also possible to create a new [`dataframe`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html) from columns in the first DataFrame.
 
 ```python
-new_data = data[['column_name1', 'column_name2', 'column_name3', 'column_name4']]
+new_data = data[["column_name1", "column_name2", "column_name3", "column_name4"]]
 ```
 
  Or you could use [`copy`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.copy.html) instead.
- 
+
  ```python
 new_data = data[['column_name1']].copy()
 ```
@@ -60,7 +61,7 @@ Check for missing values with [`isnull`](https://pandas.pydata.org/pandas-docs/s
 data.isnull().head(10)
 ```
 
-Because all the values returned are booleans, using [`sum`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.sum.html?highlight=sum#pandas.DataFrame.sum) by column (feature), you will give the amount of true values--the number of missing values for each feature. 
+Because all the values returned are booleans, using [`sum`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.sum.html?highlight=sum#pandas.DataFrame.sum) by column (feature), you will give the amount of true values--the number of missing values for each feature.
 
 ```python
 data.isnull().sum()
@@ -120,7 +121,7 @@ data.ranking.mode()[0]
 After finding the most common value for the feature, use [`inplace`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.fillna.html?highlight=fillna#pandas.DataFrame.fillna) to inpute the most frequent value.
 
 ```python
-data["column_name"].fillna('COMMON_VALUE', inplace=True)
+data["column_name"].fillna("COMMON_VALUE", inplace=True)
 ```
 
 Once again confirm that there is no missing values in the data, as value should be present and the result will be **False** for all features.
@@ -160,7 +161,9 @@ data.boxplot(["column_name"])
 Use a correlation matrix for all features, plotting a scatter plot for each combination of numerical features. Using seaborn [`set()`](https://seaborn.pydata.org/generated/seaborn.set.html) and [`pairplot()`](https://seaborn.pydata.org/generated/seaborn.pairplot.html)
 
 ```python
-numerical_data = data[["column_name_1", "column_name_2","column_name_3","column_name_4"]]
+numerical_data = data[
+    ["column_name_1", "column_name_2", "column_name_3", "column_name_4"]
+]
 sns.set()
 grid = sns.pairplot(numerical_data)
 ```
@@ -185,7 +188,7 @@ And then use [`heatmap()`](https://seaborn.pydata.org/generated/seaborn.heatmap.
 To find the distribution of the individual features with seaborn [`displot()`](https://seaborn.pydata.org/generated/seaborn.displot.html) (histogram is the default generated).
 
 ```python
-sns.displot(data[data['column_name_1'] == ?]['column_name_2'])
+sns.displot(data[data["column_name_1"] == ["column_name_2"]])
 ```
 
 #### Summary

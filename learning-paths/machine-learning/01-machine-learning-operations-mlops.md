@@ -8,25 +8,26 @@ Understand how to use the machine learning (ML) pipelines to solve a real busine
 
 - [x] Create terraform infrastructure [repository](https://github.com/kwame-mintah/terraform-aws-machine-learning-pipeline)
 - [x] Provision resources needed for Amazon SageMaker
-	- See [[02-machine-learning-terraform]] for resources created.
+  - See [[02-machine-learning-terraform]] for resources created.
 - [ ] Machine Learning life cycle (MLCL)
-	- [ ] Framing ML problems from business goals
-	- [ ] Access, prepare and process data for the model
-	- [ ] Architect ML solution and develop ML models
-	- [ ] Deploy ML models
-	- [ ] Iterate - Monitor, optimise and maintain the performance of the model
- - [ ] Create user interface (Simple react frontend)
+  - [ ] Framing ML problems from business goals
+  - [ ] Access, prepare and process data for the model
+  - [ ] Architect ML solution and develop ML models
+  - [ ] Deploy ML models
+  - [ ] Iterate - Monitor, optimise and maintain the performance of the model
+- [ ] Create user interface (Simple react frontend)
+
 ## Tech stack
 
 - Github
-	- Github Actions (CI/CD)
+  - Github Actions (CI/CD)
 - Amazon Web Services
-	- SageMaker
-	- Cloud watch
-	- S3
-	- IAM
+  - SageMaker
+  - Cloud watch
+  - S3
+  - IAM
 - Terraform
-	- [AWS Provider](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
+  - [AWS Provider](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
 
 ## Steps required
 
@@ -41,7 +42,6 @@ Understand how to use the machine learning (ML) pipelines to solve a real busine
 
 - [OpenML](https://www.openml.org/): OpenML is an open platform for sharing datasets, algorithms, and experiments.
 - [UC Irvine Machine Learning Repository](https://archive.ics.uci.edu/): Maintains datasets as a service to the machine learning community.
-
 
 ---
 

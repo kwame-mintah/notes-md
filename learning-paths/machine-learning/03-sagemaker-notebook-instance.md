@@ -17,7 +17,7 @@ At this stage, the data is stored within the notebook instance and can use packa
 
 > [!IMPORTANT]
 > If you upload an existing notebook into the instance having previously run through the cells and would like to continue where you left. You will have to make sure you use the option to run through all the cells above. Or there will be missing variables, DataFrames etc.
-> 
+>
 > Select 'Cell' then 'Run All Above'
 
 #### Breakdown [^1]
@@ -25,7 +25,7 @@ At this stage, the data is stored within the notebook instance and can use packa
 1. Import data
 2. Data preprocessing
 3. Train model (training job with SageMaker) using `xgboost` (Amazon SageMaker's implementation of XGBoost from ECR) with splitting the data set for training and validation purposes
-4. Finished Model trained is stored in S3 bucket 
+4. Finished Model trained is stored in S3 bucket
 5. Deploy endpoint using model (stored in S3 bucket)
 6. Make a request to the endpoint to test the model.
 

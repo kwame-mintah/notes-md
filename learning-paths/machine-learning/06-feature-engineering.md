@@ -6,7 +6,7 @@ Feature engineering is the act of making data easier for a machine learning mode
 
 Amazon SageMaker Processing allows you to run steps for data pre- or post-processing, feature engineering, data validation, or model evaluation workloads on Amazon SageMaker. Processing jobs accept data from Amazon S3 as input and store data into Amazon S3 as output.
 
-![](https://sagemaker.readthedocs.io/en/stable/_images/amazon_sagemaker_processing_image1.png)
+![Processing data in SageMaker](https://sagemaker.readthedocs.io/en/stable/_images/amazon_sagemaker_processing_image1.png)
 
 To use SageMaker Processing, simply supply a Python data preprocessing script.  For example, using a SageMaker prebuilt [Scikit-learn](https://sagemaker.readthedocs.io/en/stable/amazon_sagemaker_processing.html#data-pre-processing-and-model-evaluation-with-scikit-learn) container, which includes many common functions for processing data.  There are few limitations on what kinds of code and operations you can run, and only a minimal contract:  input and output data must be placed in specified directories.  If this is done, SageMaker Processing automatically loads the input data from S3 and uploads transformed data back to S3 when the job is complete.
 
@@ -68,8 +68,9 @@ xgb.fit({"train": s3_input_train, "validation": s3_input_validation})
 ```
 
 > [!NOTE]
-> 
+>
 > Specifying training parameters for the estimator, includes the following:
+>
 > 1. The `xboost` algorithm[^1] container
 > 2. The IAM role to use
 > 3. Training instance type and count
@@ -84,4 +85,4 @@ In summary, you can encode features that are otherwise inaccessible to the model
 
 ---
 
-#pandas #sklearn #numpy #sagemaker 
+#pandas #sklearn #numpy #sagemaker

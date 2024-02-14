@@ -20,7 +20,7 @@ In level 0, you deploy a trained model to production. In contrast, for level 1, 
 
 MLOps _level 2_ is for organizations that want to experiment more and frequently create new models that require continuous training. It's suitable for tech-driven companies that update their models in minutes, retrain them hourly or daily, and simultaneously redeploy them on thousands of servers.
 
-![](../../attachments/aws-mlops-level-2-workflow.jpg)
+![AWS MLOps Level 2](../../attachments/aws-mlops-level-2-workflow.jpg)
 
 [^1]: What is MLOps? by [AWS](https://aws.amazon.com/what-is/mlops/)
 
