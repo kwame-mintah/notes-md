@@ -4,7 +4,7 @@ Conda is simple way to install cross-platform Python distribution for scientific
 
 ##### Install via [Homebrew](https://brew.sh/)
 
-```
+```shell
 brew install --cask anaconda
 ```
 
@@ -13,6 +13,7 @@ brew install --cask anaconda
 ````shell
 ~/../../opt/homebrew/anaconda3/bin/conda init zsh
 ````
+
 [^1]
 
 ##### Update to use the latest tools
@@ -37,7 +38,7 @@ conda activate <env-name>
 
 #### Juypter Kernel
 
-```
+```shell
 python3 -m ipykernel install --user --name=<juypter-name>
 ```
 
@@ -69,7 +70,7 @@ conda env remove -n <env-name>
 
 Alternatively, build a docker image that uses [continuumio/miniconda3](https://hub.docker.com/r/continuumio/miniconda3/) to include everything that is needed, then run a docker container and use the Juypter server in your browser or connect to the server via VSCode.
 
-[^1]: Stackoverflow [answer](https://stackoverflow.com/a/66296716) 
+[^1]: Stackoverflow [answer](https://stackoverflow.com/a/66296716)
 
 ---
 
