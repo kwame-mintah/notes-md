@@ -8,7 +8,7 @@ I recently watched the movie [The Mill (2023)](https://en.wikipedia.org/wiki/The
 
 Mallard is an artificial intelligence (AI) that monitors employee performance and places them in a cell when performance is deemed unsatisfactory  with the intention to ensure employees "[d]on't undervalue [themselves], [as they] are a crucial part of [the] team" and Mallard is there to help them continue to grow.
 
-Mallard philosophy is good enough, is not good enough. Humans should always push for more and shouldn't settle for what they can achieve. 
+Mallard philosophy is good enough, is not good enough. Humans should always push for more and shouldn't settle for what they can achieve.
 
 ## Context
 
@@ -38,14 +38,14 @@ The idea is to use available organisation data and employee details / feedback, 
 
 Note that I have specifically used the word 'suggest' rather than 'recommend'. As suggest[^2] means:
 
-> _Suggest_
-> --
+> *Suggest*
+> __
 > to mention an idea, possible plan, or action for other people to consider
 
-While recommend[^3] means: 
+While recommend[^3] means:
 
-> _Recommend_
-> --
+> *Recommend*
+> __
 > to suggest that someone or something would be good or suitable for a particular job or purpose, or to suggest that a particular action should be done
 
 The choice of word is very important, as we do not want to *force* objectives onto people or give any impression they *must* do this to perform well. The employee should be the one to make the final choice.
@@ -55,19 +55,19 @@ The choice of word is very important, as we do not want to *force* objectives on
 We want to encourage a continuous feedback loop at all times. If an employee has successfully completed a milestone in their objective - they should be given more feedback on how to proceed forwards - what more can they do and also highlight things happening within the organisation they can join.
 
 > Feedback loop definition
-> --
+> __
 > In general, any feedback loop should have the primary three stages. During the first stage, we capture and store the input - this is the data with which we operate every day. Within the second one, we actually analyze the input, gathered from stage one. Finally, during the last stage, we need to make decisions based on the insights gained from the second stage[^4].
 
 To keep it simple, the idea is identify areas of improvement and/or new skills that will expand an employees' skill set. Then guide them throughout by providing all the necessary information and opportunities to help them succeed in accomplishing their goal and better themselves and the organisation.
 
-## Use case examples 
+## Use case examples
 
 Once a objective has been set, available data will be used to assist the employee achieve their KPI. Some use cases of how the solution will help people achieve their KPIs have been listed below.
 
 ### Example 1
 
 > Employee A
-> --
+> __
 > Objective: Participate in a company environmental, social and corporate governance (ESG) event.
 
 Employee A objective is to demonstrate ESG within their organisation. They would be suggested ESG projects that are aligned with having an impact on sociability - for example creating a platform to help farmers increase their crop yields etc. It does not necessary have to be a project, could potentially be an event that their organisation has arranged that they could volunteer to take apart of.
@@ -75,17 +75,17 @@ Employee A objective is to demonstrate ESG within their organisation. They would
 ### Example 2
 
 > Employee B
-> --
+> __
 > Objective: Learn to code in Python
 
 Employee B objective is to learn a new programming language. If we were to hypothetically look into the employees' record we could see that their proficient programming is language C++. And the objective they set is to broaden their language. They could be provided with projects that are using the Python language, but we must understand the skill set already available on the project.
 
 We want to enable people and not unknowingly hinder them. The idiom "The blind leading the blind" is very important here as we want to give people the best opportunity to learn. Understanding the different skill levels on a project is detrimental, a team with only junior engineers may not know the most efficient way to write clean code in Python, in comparison to a Senior Python engineer who has in-depth knowledge of Python.
 
-Employee B ideal environment should have a good balance of people with years of experience with Python, so they can learn the standards and if they make any mistakes, have someone more familiar who is able to direct them on the right path. 
+Employee B ideal environment should have a good balance of people with years of experience with Python, so they can learn the standards and if they make any mistakes, have someone more familiar who is able to direct them on the right path.
 
 > [!NOTE]
-> 
+>
 > The more detailed an objective is, the more specific suggestions will be.
 
 Alternatively, if Employee B had no programming experience. Then they would be provided with different suggestions, such as training materials that past employees have taken and have highly rated. Followed by, a suitable project to help the employee implement what they have learned, supported by their fellow colleagues.
@@ -95,13 +95,13 @@ Alternatively, if Employee B had no programming experience. Then they would be p
 This example is different to the ones listed above. An employee has received feedback from their colleagues.
 
 > Feedback received
-> --
+> __
 > I would find it helpful if you could provide more context when giving updates. That way, I can understand the situation better and provide better feedback.
 
 With the feedback provided a new objective can be suggested for the employee to set.
 
 > Suggested objective
-> --
+> __
 > Ensure that context is provided in a concise and easily understandable format, avoiding unnecessary jargon or technical terms.
 
 The objective is clear as it provides some pointers on how to accomplish it. Just like before, training materials for effective communication can be provided -- if we wanted to go even further a example topic could be provided for the person to talk about.
@@ -122,7 +122,7 @@ With the large amounts of data available, from human resource (HR) records conta
 
 This will allow organisations to have a much better skill visibility and be able to retain their workforce, with tailored pathways to help each individual. As the data is now being used effectively, people with the right skills can be quickly identified and placed in the right places, were the skills are needed and allows for better forecasting of ongoing work and potential future work.
 
-![](../attachments/continuous-improvement-ml-project.png)
+![Purposed flowchart for solution](../attachments/continuous-improvement-ml-project.png)
 
 Through machine learning we can identify trends and patterns, to distinguish the difference between junior members to senior employees. And understand why junior employees are more willing to take on new opportunities in comparison to senior employees and why?
 
@@ -133,22 +133,22 @@ Through machine learning we can identify trends and patterns, to distinguish the
 Additionally, we can use [Matrix factorization](https://developers.google.com/machine-learning/recommendation/collaborative/matrix) which is used in existing recommendation systems. This is a good starting point, as the model can help discover new interests amongst employees and make suggestions based on similar employees.
 
 > [!NOTE]
-> My understanding of machine learning is still in the early stages, I have mentioned these these processes as this what I have come across so far. 
+> My understanding of machine learning is still in the early stages, I have mentioned these these processes as this what I have come across so far.
 
 ### Artificial intelligence
 
 These forms of AI can be beneficial below are a couple identified and what they can help achieve.
 
 - Sentiment analysis
-	- Identify if employee feedback was positive, negative or neutral. Can be linked with various data. For example, determine reviews of training undertaken by others was helpful or not. This can help with ensuring *good* materials are provided.
+  - Identify if employee feedback was positive, negative or neutral. Can be linked with various data. For example, determine reviews of training undertaken by others was helpful or not. This can help with ensuring *good* materials are provided.
 - Named entity recognition (NER)
-	- Categories text.
+  - Categories text.
 - Entity linking
-	- Helpful to link with existing data within the company.
+  - Helpful to link with existing data within the company.
 - Chatbot and/or Question answering
-	- Potentially helpful for individuals to have somewhere to query information that has been provided to them. For example, why X has been recommended and the reasoning.
+  - Potentially helpful for individuals to have somewhere to query information that has been provided to them. For example, why X has been recommended and the reasoning.
 - Video Indexer
-	- Used to extract insights from videos (Seems to be a service provided by Microsoft).
+  - Used to extract insights from videos (Seems to be a service provided by Microsoft).
 
 ## Plausible Benefits
 
