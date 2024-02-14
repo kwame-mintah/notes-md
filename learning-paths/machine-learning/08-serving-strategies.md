@@ -1,5 +1,7 @@
+# Serving Strategies
+
 ​​
-Machine learning models can not be deployed and forgotten, as new data may imply a need to check for model drift and automatically update it. Traceability of models in production becomes imperative. There are many ways to serve ML models to end users today, and even though new ways keep popping up as time passes, many questions remain. Firstly, how do we pick the appropriate serving approach and, secondly, how can we execute it as fast and efficiently as possible?
+Machine learning models can not be deployed and forgotten, as new data may imply a need to check for model drift and automatically update it. Traceability of models in production becomes imperative. There are many ways to serve ML models to end users today.
 
 ## The 3 Kinds of Methods
 
@@ -19,50 +21,45 @@ Streaming prediction is when data is generated every second from thousands of da
 
 ### Embedded Models
 
-Deploy models within:
+Embedded machine learning is a type of edge computing: running algorithms on end-user computational resources rather than a central data centre (the cloud) and can offer a few key advantages compared to cloud-based processing:
 
-- Website
-  - Prototyping stage
-  - Model won't change or be retrained often
-  - Not a core component of the website
-  - Minimise external dependencies
-  - Relatively simple and not complex website
-- Mobile app
-  - Pros:
-    - Increased privacy
-    - Offline inference
-    - Low latency
-    - Energy efficiency
-    - Compliance with regulatory requirements
-    - Bandwidth saving
-  - Cons
-    - Limited computational resources
-    - Storage constraints
-    - Limited model interactivity
-    - Compatibility issues
-    - Model maintenance and updates challenges
-    - Training limitations
-- Edge device
-  - Pros:
-    - Reduced network dependency
-    - Distributed processing
-    - Edge-to-Edge communication
-    - Autonomous operation
-    - Reduced cloud costs
-    - Low latency at the edge
-  - Cons:
-    - Scalability concerns
-    - Environmental factors
-    - Limited processing power
-    - Connectivity issues
-    - Resource constraints
-    - Heterogeneous Hardware
+- Speed: Without a round-trip to a server for predictions, model inputs and outputs can be provided much more quickly.
+- Connectivity: An internet connection is not required for embedded machine learning. This means you can deploy your model somewhere without having to have an internet network set up (i.e. in a vast field to analyse crops).
+- Privacy: All data processing happens on a device directly where a user is present, meaning the input data received stays locally.
+
+#### Website
+
+- Prototyping stage
+- Model won't change or be retrained often
+- Not a core component of the website
+- Minimize external dependencies
+- Relatively simple and not complex website
+
+#### Mobile app
+
+| Pros                                    | Cons                                     |
+| --------------------------------------- | ---------------------------------------- |
+| Increased privacy                       | Limited computational resources          |
+| Offline inference                       | Storage constraints                      |
+| Low latency                             | Limited model interactivity              |
+| Energy efficiency                       | Compatibility issues                     |
+| Compliance with regulatory requirements | Model maintenance and updates challenges |
+| Bandwidth saving                        | Training limitations                     |
+
+#### Edge device
+
+| Pros                       | Cons                     |
+| -------------------------- | ------------------------ |
+| Reduced network dependency | Scalability concerns     |
+| Distributed processing     | Environmental factors    |
+| Edge-to-Edge communication | Limited processing power |
+| Autonomous operation       | Connectivity issues      |
+| Reduced cloud costs        | Resource constraints     |
+| Low latency at the edge    | Heterogeneous Hardware   |
 
 ### Model as a Service
 
-TBA...
-
-Within Dedicated hardware, serverless, as pipelines ...
+Model as a Service (MaaS) is a cloud-based service that enables businesses to develop, deploy, and manage machine learning models quickly and efficiently. Offering access to machine learning models that can be used to develop AI applications and services. Enabling businesses to quickly and easily deploy pre-trained machine learning models that are ready to use.
 
 ### Model as Data
 
