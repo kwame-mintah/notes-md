@@ -222,7 +222,7 @@ A tree based data structure where parent nodes have greater than or equal to pri
 - Max-Heap: In this heap, the value of the root node must be the greatest among all its child nodes and the same thing must be done for its left and right sub-tree also.
 - Min-Heap: In this heap, the value of the root node must be the smallest among all its child nodes and the same thing must be done for its left and right sub-tree also.
 
-> [!NOTE] 
+> [!NOTE]
 > **Priority Queue**
 > An abstract data type where elements have "priority" and higher priority elements are severed first. Most common implementation is the Heap.
 
@@ -240,16 +240,14 @@ A graph data structure is a collection of nodes that have data and are connected
 - A collection of vertices V
 - A collection of edges E, represented as ordered pairs of vertices (u,v)
 
-More formally a Graph is composed of a set of vertices( V ) and a set of edges( E ). The graph is denoted by G(E, V). The vertices are sometimes referred to as nodes and the edges are lines or arcs that connect any two nodes in the graph. 
+More formally a Graph is composed of a set of vertices( V ) and a set of edges( E ). The graph is denoted by G(E, V). The vertices are sometimes referred to as nodes and the edges are lines or arcs that connect any two nodes in the graph.
 
 > [!NOTE]
-> 
+>
 > **Components of a Graph**
+>
 > - Vertices: Vertices are the fundamental units of the graph. Sometimes, vertices are also known as vertex or nodes. Every node/vertex can be labeled or unlabelled.
 > - Edges: Edges are drawn or used to connect two nodes of the graph. It can be ordered pair of nodes in a directed graph. Edges can connect any two nodes in any possible way. There are no rules. Sometimes, edges are also known as arcs. Every edge can be labeled/unlabelled.
-
-
-
 
 [^1]: In Python, when to use a Dictionary, List or Set? [Jon Skeet](https://stackoverflow.com/a/3489078)
 

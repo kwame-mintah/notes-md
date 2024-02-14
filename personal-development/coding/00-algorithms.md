@@ -2,7 +2,7 @@
 
 A set of steps or instructions for completing a task. Alternatively, a set of steps a program takes to finish a task. Algorithms should produce a result, meaning they should complete and not take an infinite amount of time.
 
-> [!NOTE] 
+> [!NOTE]
 > **Algorithm**
 > Clearly defined problem statement, input, and output. The steps in the algorithm need to be in a very specific order. And these steps need to be distinct, should not be able to break down into further sub-tasks. Lastly, the algorithm should produce a result.
 
@@ -12,7 +12,7 @@ $Big O$ is the theoretical definition of the complexity of an algorithm as a fun
 
 > Complexity is relative, it is relative to other algorithms solving the same problem and not all algorithms.
 
-![](/attachments/big-o-complexity-chart-by-bigocheatsheet.png)
+![Big O Cheat sheet](/attachments/big-o-complexity-chart-by-bigocheatsheet.png)
 
 - $O(1)$ is read as constant time so it takes the same amount of run time in any given case.
 - $O(log\text{ }n)$ or $O(In\text{ }n)$ is read as logarithmic or sub-linear runtime, as the amount increases the number of operations taken grows slowly and eventually flattens.
@@ -136,7 +136,7 @@ For Binary trees, there are three types of DFS traversals.
 
 Example binary tree: `[5,4,8,11,null,13,4,7,2,null,null,5,1]`
 
-```
+```plaintext
         5
        / \
       4     8
@@ -214,7 +214,7 @@ The algorithm works as follows:
 
 Example binary tree: `[3,9,20,null,null,15,7]`
 
-```
+```plaintext
   3
  / \
 9    20
@@ -315,12 +315,12 @@ def build_graph(edges):
     return graph  # {0: [1, 2], 1: [0, 2], 2: [1, 0]}
 ```
 
->  **BFS pseudocode**
->  create a queue `Q` 
->  mark vertex `v` as visited and put `v` into Q 
-	while `Q` is not empty 
-	    remove first vertex in the `Q` 
-	    mark and add all (unvisited) neighbours of u
+> **BFS pseudocode**
+> create a queue `Q`
+> mark vertex `v` as visited and put `v` into Q
+ while `Q` is not empty
+     remove first vertex in the `Q`
+     mark and add all (unvisited) neighbours of u
 
 ---
 
