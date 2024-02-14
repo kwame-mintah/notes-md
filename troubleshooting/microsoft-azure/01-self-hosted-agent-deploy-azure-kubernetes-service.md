@@ -1,4 +1,4 @@
-## Using Azure Kubernetes Service
+# Using Azure Kubernetes Service
 
 Azure Kubernetes Service (AKS) simplifies deploying a managed Kubernetes cluster in Azure by offloading the operational overhead to Azure [^1]. I recently challenged myself to deploy an application to Azure Kubernetes service, using the Azure DevOps platform and create all Azure resources via Terraform.
 
@@ -33,7 +33,7 @@ What needed to be done was to create an Microsoft Entra application (MEA) and as
 
 ### Forbidden from pulling docker images from ACR
 
-After resolving the issue with docker registry credentials not being created. The next problem encountered after was the inability to to pull the docker image from ACR. When inspect the namespace and pod(s) the events showed that there was an `ImagePullBackOff`. 
+After resolving the issue with docker registry credentials not being created. The next problem encountered after was the inability to to pull the docker image from ACR. When inspect the namespace and pod(s) the events showed that there was an `ImagePullBackOff`.
 
 ```bash
  "pythonfastapik8s.azurecr.io/pythonfastapik8s:255": [rpc error: code = Unknown desc = failed to pull and unpack 
@@ -43,7 +43,6 @@ After resolving the issue with docker registry credentials not being created. Th
 Initial thoughts was that the docker credentials were not created correctly for the pod and resulted in the error. However, after hours and hours of searching it was because I had configured my ACR to only allow certain IP Addresses to pull from the registry.
 
 When deploying to AKS, a load balancer is created as part of the service and this includes Frontend public IP addresses. At the time, I was under the assumption that only my IP addresses was enough, as the self-hosted build agent was running on my own machine. But when deploying to the cluster, the originating IP address would not be my own IP, but rather the Frontend public IP address created. Including the IP addresses into the allowed range resolved the problem.
-
 
 [^1]: What is [Azure Kubernetes Service](https://learn.microsoft.com/en-us/azure/aks/intro-kubernetes)?
 [^2]: Build and deploy to [Azure Kubernetes Service with Azure Pipelines](https://learn.microsoft.com/en-us/azure/aks/devops-pipeline?tabs=cli&pivots=pipelines-yaml)

@@ -14,35 +14,35 @@ Because `docker` command was missing, the first build attempt failed as expected
 
 ```yaml
   - script: |
-	  apt-get update
-	  apt-get install ca-certificates curl gnupg
-	  install -m 0755 -d /etc/apt/keyrings
-	  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-	  chmod a+r /etc/apt/keyrings/docker.gpg
+   apt-get update
+   apt-get install ca-certificates curl gnupg
+   install -m 0755 -d /etc/apt/keyrings
+   curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+   chmod a+r /etc/apt/keyrings/docker.gpg
 
-	  echo \
-		"deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-		$(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
-		tee /etc/apt/sources.list.d/docker.list > /dev/null
-	  apt-get update
-	workingDirectory: $(projectRoot)
-	displayName: "Set up the Docker repository"
+   echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  tee /etc/apt/sources.list.d/docker.list > /dev/null
+   apt-get update
+ workingDirectory: $(projectRoot)
+ displayName: "Set up the Docker repository"
 
   - script: |
-	  apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y --allow-change-held-packages
-	  rm -rf /var/lib/apt/lists/* /var/cache/apt/archives/*
-	workingDirectory: $(projectRoot)
-	displayName: "Install the Docker packages"
+   apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y --allow-change-held-packages
+   rm -rf /var/lib/apt/lists/* /var/cache/apt/archives/*
+ workingDirectory: $(projectRoot)
+ displayName: "Install the Docker packages"
 ```
 
 This was successful, but an improvement that can be made is to check the `docker` command cannot be found, before attempting to install all the packages. At the moment, it would run these scripts on each job run. An example is:
 
 ```bash
-	if command; then
-		echo "command found, will skip install"
-	else
-		echo "command not found will install"
-	fi
+ if command; then
+  echo "command found, will skip install"
+ else
+  echo "command not found will install"
+ fi
 ```
 
 ### Cannot connect to the docker daemon
@@ -53,13 +53,13 @@ After searching online, I found the Docker-in-Docker (DIND) strategy, were you r
 
 ```yaml
 volumes:
-	- /var/run/docker.sock:/var/run/docker.sock
+ - /var/run/docker.sock:/var/run/docker.sock
 ```
 
 After making this change, the build was successful and the docker image was built and pushed to ACR.
 
 > [!NOTE]
-> 
+>
 > Using the DIND strategy means that all docker images built will be available on the host machine. If building a lot of different images, this can quickly take up space on the host machine. Ensure there is a periodic clear down of images via a garbage collector, or include a post step to remove the recently built image after successful pushing to ACR.
 
 ### Unable to pull image from ACR Quarantine
@@ -72,8 +72,8 @@ Unfortunately, in order to no longer be blocked, the feature had to be turned of
 
 ```json
 {
-	"quarantineState": "[Passed|Failed]",
-	"quarantineDetails": "[json string of detailed results]"
+ "quarantineState": "[Passed|Failed]",
+ "quarantineDetails": "[json string of detailed results]"
 }
 ```
 
@@ -94,7 +94,6 @@ This was due to an architecture mismatch [^4], because the host machine for the 
 ```bash
 FROM --platform=linux/amd64
 ```
-
 
 [^1]:  Overview of [Azure Container Registry](https://azure.microsoft.com/en-us/products/container-registry/)
 [^2]:  How (and Why) to Run Docker Inside Docker by [JAMES WALKER](https://www.howtogeek.com/devops/how-and-why-to-run-docker-inside-docker/)
