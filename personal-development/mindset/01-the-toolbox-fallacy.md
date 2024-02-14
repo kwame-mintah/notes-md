@@ -20,7 +20,7 @@ The creation of the UI and the interaction between the end users is what makes y
 
 I needed to accept, that my first project wouldn't be perfect, but what was important is that I had tried because at that time, I had nothing to show and had made no mistakes that I could make improvements. Ever since, I have always attempted to try something new and accepted that it won't be perfect but I would have at least $done$ [it]([[[[00-the-cult-of-done-manifesto]]).
 
-> “I have been impressed with the urgency of doing. Knowing is not enough; we must apply. Being willing is not enough, we must do.” - Leonardo da Vinci 
+> “I have been impressed with the urgency of doing. Knowing is not enough; we must apply. Being willing is not enough, we must do.” - Leonardo da Vinci
 
 At the end of the day, it's better to say you have tried or at least attempted something. Rather than not making any attempts at all.
 
@@ -29,4 +29,4 @@ At the end of the day, it's better to say you have tried or at least attempted s
 
 ---
 
-#personal-development 
+#personal-development
