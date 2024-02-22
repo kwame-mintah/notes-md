@@ -200,6 +200,14 @@ All new elements are added to the end of the queue, while the first element to b
 Each node will have a key value, that will be mapped to the true value of the node. At a glance, it is a less efficient version of a HashMap. The value of the key of the left sub-tree, is less than the value of its parent (root) node's key. The value of the key on the right sub-tree os greater than or equal to the value of its parent (root) node's key.
 The benefit of using a Binary Tree over a HashMap, is that the values are ordered.
 
+```plaintext
+  3
+ / \
+9    20
+    /  \
+   15   7
+```
+
 | Operation | Time complexity   |
 | --------- | ----------------- |
 | `Insert`  | $O(log\text{ }n)$ |
@@ -213,7 +221,7 @@ TBA.
 | Operation | Time complexity |
 | --------- | --------------- |
 | `Insert`  | $O(n)$          |
-| `Searc`   | $O(n)$          |
+| `Search`   | $O(n)$          |
 
 ## Heap
 

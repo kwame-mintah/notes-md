@@ -165,7 +165,7 @@ def in_order(root=None):
         in_order(root.right)
 
 
-def pre_order(root):
+def pre_order(root=None):
     if not root:
         return 0
     else:
