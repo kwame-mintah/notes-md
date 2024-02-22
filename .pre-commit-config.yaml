@@ -8,6 +8,6 @@ repos:
   - repo: https://github.com/igorshubovych/markdownlint-cli
     rev: v0.39.0 # replace with latest tag on GitHub
     hooks:
-    - id: markdownlint
+    - id: markdownlint # https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
       args:
         - --fix
