@@ -45,8 +45,8 @@ Cont. [[03-sagemaker-notebook-instance]]
   - [x] SageMaker endpoints (/aws/sagemaker/Endpoints/linear-learner). ARN example: `log-group:/aws/sagemaker/Endpoints/linear-learner:*`
 - [x] Training job, this needs the AmazonSageMakerFullAccess IAM policy IAM. (Unsure about this resources, as training jobs need dataset that has already preprocessed... maybe.)[^1]
   - [x] Seems that the SageMaker notebook Instance can create a new training job, so will need to have the necessary permission.
-- [ ] Endpoint(s) [^2] (needs a model ready to deploy)
-  - [ ] Develop environment (Provisioned)
+- [x] Endpoint(s) [^2] (needs a model ready to deploy)
+  - [x] Develop environment (Provisioned)
   - [ ] Staging environment (Provisioned)[^3]
   - [ ] Production (Serverless?)
 
