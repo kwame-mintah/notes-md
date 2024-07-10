@@ -81,6 +81,7 @@ These notes are related to configuring compute for a job run:
 - From the options available, the NVv3 series is the only one featuring GPUs.
 - The DSv3 instances are general purpose compute.
 - The ESv3 instances are memory optimized compute. Finally, the HBv3 instances are high performance compute.
+- `D` - General Purpose, `F` - Compute Optimized, `E` - Memory Optimized,  `NC` - GPU.
 
 ---
 #azure #ml #mlops #automl
