@@ -61,6 +61,14 @@ Embedded machine learning is a type of edge computing: running algorithms on end
 
 Model as a Service (MaaS) is a cloud-based service that enables businesses to develop, deploy, and manage machine learning models quickly and efficiently. Offering access to machine learning models that can be used to develop AI applications and services. Enabling businesses to quickly and easily deploy pre-trained machine learning models that are ready to use.
 
+| Pros                            | Cons                           |
+| ------------------------------- | ------------------------------ |
+| Improved testing and debugging  | Increased complexity           |
+| Flexibility in technology stack | Dependency management          |
+| Enhanced team collaboration     | Communication overhead         |
+| Improved resource utilization   | Increased resource consumption |
+| Scalability                     | Security concerns              |
+
 ### Model as Data
 
 Niche deployment strategy where the models are queried as if they were items in a database. For example [PostgresML](https://postgresml.org/) a complete MLOps platform in a PostgreSQL extension. Build simpler, faster and more scalable models right inside your database.
