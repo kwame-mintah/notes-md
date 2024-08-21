@@ -16,18 +16,21 @@ Understand how to use the machine learning (ML) pipelines to solve a real busine
   - [x] Access, prepare and process data for the model
   - [x] Architect ML solution and develop ML models
   - [x] Deploy ML models
-  - [ ] Iterate - Monitor, optimise and maintain the performance of the model
+  - [x] Iterate - Monitor, optimise and maintain the performance of the model
 - [ ] Create user interface (Simple react frontend)
 
 ## Tech stack
 
 - Github
+  - Repository
   - Github Actions (CI/CD)
 - Amazon Web Services
   - SageMaker
-  - Cloud watch
+  - CloudWatch
   - S3
-  - IAM
+  - Identity and Access Management (IAM)
+  - API Gateway
+  - VPC
 - Terraform
   - [AWS Provider](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
 
@@ -39,6 +42,8 @@ Understand how to use the machine learning (ML) pipelines to solve a real busine
 - Estimating a model
 - Evaluating the effectiveness of the model
 - Setting the model up to make ongoing predictions
+
+![Example of a basic machine learning workflow](attachments/aws-basic-machine-learning-workflow-in-vpc.png)
 
 ## Resources
 
