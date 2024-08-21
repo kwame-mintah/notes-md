@@ -20,6 +20,8 @@ At this stage, the data is stored within the notebook instance and can use packa
 >
 > Select 'Cell' then 'Run All Above'
 
+It's also possible to [associate git repositories with SageMaker notebook instances](https://docs.aws.amazon.com/sagemaker/latest/dg/nbi-git-repo.html), so notebooks are persisted after the notebook has been removed / deleted, allow for easy collaboration and also aid in learning.
+
 #### Breakdown [^1]
 
 1. Import data
