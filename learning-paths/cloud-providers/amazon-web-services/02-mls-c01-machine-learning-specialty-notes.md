@@ -6,5 +6,11 @@ Machine learning (ML) is the process of training computers, using math and stati
 
 ![Machine Learning General Steps](aws-machine-learning-general-steps.png)
 
+# Fail forward
+
+Fail forward means purposefully and deliberately using failure as a path to success. Failing forward with ML means using failure as an iterative opportunity to become fault-tolerant and find a successful direction in subsequent attempts. Many successful outcomes come after many rounds of iteration, and some aren’t successful at all.
+
+Failure isn't damaging if changes and adjustments are small, and reattempts are encouraged.
+
 ---
 #aws #ml
