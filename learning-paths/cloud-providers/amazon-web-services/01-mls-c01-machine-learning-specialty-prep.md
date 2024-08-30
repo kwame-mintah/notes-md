@@ -22,7 +22,7 @@ Content that needs to be covered related to the exam, additional resources can b
 - [ ] [Developing Machine Learning Applications](https://www.datacamp.com/tutorial/aws-sagemaker-tutorial)
       Explore Amazon's fully managed ML platform, Amazon SageMaker.
 
-- [ ] Types of Machine Learning Solutions
+- [x] Types of Machine Learning Solutions
       Review the three different disciplines for machine learning: computer vision, natural language processing, and chat bots. Go through practical applications and the AWS services used in each.
 
 ## Cheat sheets
@@ -37,15 +37,15 @@ Content that needs to be covered related to the exam, additional resources can b
 
 ### AWS Built-in algorithms
 
-- [ ] 1/5 for Linear Learner, XGBoost, Seq-to-Seq and DeepAR [**here**](https://medium.com/@tantabase/aws-certified-machine-learning-cheat-sheet-built-in-algorithms-1-8-dc5ebc5b2928)
+- [x] 1/5 for Linear Learner, XGBoost, Seq-to-Seq and DeepAR [**here**](https://medium.com/@tantabase/aws-certified-machine-learning-cheat-sheet-built-in-algorithms-1-8-dc5ebc5b2928)
 
-- [ ] 2/5 for BlazingText, Object2Vec, Object Detection and Image Classification and DeepAR [**here**](https://medium.com/@tantabase/aws-certified-machine-learning-cheat-sheet-built-in-algorithms-2-8-cfb70b60603e)
+- [x] 2/5 for BlazingText, Object2Vec, Object Detection and Image Classification and DeepAR [**here**](https://medium.com/@tantabase/aws-certified-machine-learning-cheat-sheet-built-in-algorithms-2-8-cfb70b60603e)
 
-- [ ] 3/5 for Semantic Segmentation, Random Cut Forest, Neural Topic Model and LDA [**here**](https://medium.com/@tantabase/aws-certified-machine-learning-cheat-sheet-built-in-algorithms-3-8-50332ef8de1c)
+- [x] 3/5 for Semantic Segmentation, Random Cut Forest, Neural Topic Model and LDA [**here**](https://medium.com/@tantabase/aws-certified-machine-learning-cheat-sheet-built-in-algorithms-3-8-50332ef8de1c)
 
-- [ ] 4/5 for KNN, K-Means, PCA and Factorization for [**here**](https://medium.com/@tantabase/aws-certified-machine-learning-cheat-sheet-built-in-algorithms-4-8-a17f1bd4918a)
+- [x] 4/5 for KNN, K-Means, PCA and Factorization for [**here**](https://medium.com/@tantabase/aws-certified-machine-learning-cheat-sheet-built-in-algorithms-4-8-a17f1bd4918a)
 
-- [ ] 5/5 for IP insights and reinforcement learning [**here**](https://medium.com/@tantabase/aws-certified-machine-learning-cheat-sheet-built-in-algorithms-5-5-5a940c35b38e)
+- [x] 5/5 for IP insights and reinforcement learning [**here**](https://medium.com/@tantabase/aws-certified-machine-learning-cheat-sheet-built-in-algorithms-5-5-5a940c35b38e)
 
 ### Machine learning services
 
@@ -60,6 +60,12 @@ Content that needs to be covered related to the exam, additional resources can b
 - [ ] 2/3 for Instance Types, [SageMaker and Kubernetes](https://docs.aws.amazon.com/sagemaker/latest/dg/kubernetes-workflows.html), [SageMaker Projects](https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-projects.html), [Inference Pipelines](https://docs.aws.amazon.com/sagemaker/latest/dg/inference-pipelines.html) and [Spot Training](https://docs.aws.amazon.com/sagemaker/latest/dg/model-managed-spot-training.html) [here](https://medium.com/@tantabase/aws-certified-machine-learning-cheat-sheet-ml-ops-2-3-27b4838e7936)
 
 - [ ] 3/3 for [Availability Zones](https://docs.aws.amazon.com/sagemaker/latest/dg/deployment-best-practices.html), [Serverless Inference](https://docs.aws.amazon.com/sagemaker/latest/dg/serverless-endpoints.html), [SageMaker Inference Recommender](https://docs.aws.amazon.com/sagemaker/latest/dg/inference-recommender.html) and [Auto Scaling](https://docs.aws.amazon.com/sagemaker/latest/dg/endpoint-auto-scaling.html) [here](https://medium.com/@tantabase/aws-certified-machine-learning-cheat-sheet-ml-ops-3-3-a5ab906d2266)
+
+### Miscellaneous
+
+- [x] Lesser Known High Level Machine Learning Services [here](https://medium.com/@tantabase/aws-certified-machine-learning-cheat-sheet-lesser-known-high-level-machine-learning-services-98c14e41423e)
+- [ ] Exploratory Data Analysis [here](https://medium.com/@tantabase/aws-certified-machine-learning-cheat-sheet-eda-02262f1ee26e)
+- [ ] Rules of Machine Learning: Best Practices for ML Engineering [here](https://martin.zinkevich.org/rules_of_ml/rules_of_ml.pdf)
 
 [^1]: [Setting up secure, well-governed machine learning environments on AWS](https://aws.amazon.com/blogs/mt/setting-up-machine-learning-environments-aws/)
 
