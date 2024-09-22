@@ -4,54 +4,54 @@
 
 Content that needs to be covered related to the exam, additional resources can be found on [skillbuilder](https://skillbuilder.aws/products#machine-learning).
 
-- [x] [Machine Learning Exam Basics](https://www.aws.training/Details/Curriculum?id=27271)
+- [ ] [Machine Learning Exam Basics](https://www.aws.training/Details/Curriculum?id=27271)
       Explore the services for building, training, and deploying models at scale. Hear from Amazon’s own data scientists about how to consider ML business challenges and decisions.
 
-- [x] [Process Model: CRISP-DM on the AWS Stack](https://quizlet.com/736040855/flashcards)
+- [ ] [Process Model: CRISP-DM on the AWS Stack](https://quizlet.com/736040855/flashcards)
       Walk through the CRISP-DM methodology and framework and then apply the model's six phases to your daily work.
 
-- [x] [The Elements of Data Science](https://github.com/understructure/AWSMachineLearningCertification/blob/master/The_Elements_of_Data_Science.md)
+- [ ] [The Elements of Data Science](https://github.com/understructure/AWSMachineLearningCertification/blob/master/The_Elements_of_Data_Science.md)
       Learn to build and continuously improve machine learning models.
 
 - [ ] Storage Deep Dive Learning Path
       Progress from the fundamentals to technical deep dives to advance your AWS storage expertise and help your organization migrate to the cloud faster.
 
-- [x] [Machine Learning Security](https://aws.amazon.com/blogs/security/7-ways-to-improve-security-of-your-machine-learning-workflows/) [^1]
+- [ ] [Machine Learning Security](https://aws.amazon.com/blogs/security/7-ways-to-improve-security-of-your-machine-learning-workflows/) [^1]
       This curriculum covers the AWS products and services that enable you to secure your applications and environments with specific topics detailing NACLs, security groups, AWS identity and access management, and encryption key management.
 
 - [ ] [Developing Machine Learning Applications](https://www.datacamp.com/tutorial/aws-sagemaker-tutorial)
       Explore Amazon's fully managed ML platform, Amazon SageMaker.
 
-- [x] Types of Machine Learning Solutions
+- [ ] Types of Machine Learning Solutions
       Review the three different disciplines for machine learning: computer vision, natural language processing, and chat bots. Go through practical applications and the AWS services used in each.
 
 ## Cheat sheets
 
 ### SageMaker Features
 
-- [x] 1/3 for [Automatic Model Tuning](https://docs.aws.amazon.com/sagemaker/latest/dg/automatic-model-tuning.html), [Apache Spark](https://docs.aws.amazon.com/sagemaker/latest/dg/use-spark-processing-container.html), [SageMaker Studio](https://aws.amazon.com/sagemaker/studio/) and [SageMaker Debugger](https://docs.aws.amazon.com/sagemaker/latest/dg/train-debugger.html) [**here**](https://medium.com/@tantabase/aws-certified-machine-learning-cheat-sheet-sagemaker-features-1-3-f7d65252dc28)
+- [ ] 1/3 for [Automatic Model Tuning](https://docs.aws.amazon.com/sagemaker/latest/dg/automatic-model-tuning.html), [Apache Spark](https://docs.aws.amazon.com/sagemaker/latest/dg/use-spark-processing-container.html), [SageMaker Studio](https://aws.amazon.com/sagemaker/studio/) and [SageMaker Debugger](https://docs.aws.amazon.com/sagemaker/latest/dg/train-debugger.html) [**here**](https://medium.com/@tantabase/aws-certified-machine-learning-cheat-sheet-sagemaker-features-1-3-f7d65252dc28)
 
-- [x] 2/3 for [Autopilot](https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development.html), [Model Monitor](https://docs.aws.amazon.com/sagemaker/latest/dg/model-monitor.html), [Deployment Safeguards](https://aws.amazon.com/about-aws/whats-new/2021/11/new-deployment-guardrails-amazon-sagemaker-inference-endpoints/) and [Canvas](https://docs.aws.amazon.com/sagemaker/latest/dg/canvas.html) [**here**](https://medium.com/@tantabase/aws-certified-machine-learning-cheat-sheet-sagemaker-features-2-3-b47d982678dc)
+- [ ] 2/3 for [Autopilot](https://docs.aws.amazon.com/sagemaker/latest/dg/autopilot-automate-model-development.html), [Model Monitor](https://docs.aws.amazon.com/sagemaker/latest/dg/model-monitor.html), [Deployment Safeguards](https://aws.amazon.com/about-aws/whats-new/2021/11/new-deployment-guardrails-amazon-sagemaker-inference-endpoints/) and [Canvas](https://docs.aws.amazon.com/sagemaker/latest/dg/canvas.html) [**here**](https://medium.com/@tantabase/aws-certified-machine-learning-cheat-sheet-sagemaker-features-2-3-b47d982678dc)
 
-- [x] 3/3 for [Training Complier](https://docs.aws.amazon.com/sagemaker/latest/dg/training-compiler.html), [Feature Store](https://aws.amazon.com/sagemaker/feature-store/), [Lineage Tracking](https://docs.aws.amazon.com/sagemaker/latest/dg/lineage-tracking.html) and [Data Wrangler](https://aws.amazon.com/sagemaker/data-wrangler/) [**here**](https://medium.com/@tantabase/aws-certified-machine-learning-cheat-sheet-sagemaker-features-3-3-66c5a0d022fa)
+- [ ] 3/3 for [Training Complier](https://docs.aws.amazon.com/sagemaker/latest/dg/training-compiler.html), [Feature Store](https://aws.amazon.com/sagemaker/feature-store/), [Lineage Tracking](https://docs.aws.amazon.com/sagemaker/latest/dg/lineage-tracking.html) and [Data Wrangler](https://aws.amazon.com/sagemaker/data-wrangler/) [**here**](https://medium.com/@tantabase/aws-certified-machine-learning-cheat-sheet-sagemaker-features-3-3-66c5a0d022fa)
 
 ### AWS Built-in algorithms
 
-- [x] 1/5 for Linear Learner, XGBoost, Seq-to-Seq and DeepAR [**here**](https://medium.com/@tantabase/aws-certified-machine-learning-cheat-sheet-built-in-algorithms-1-8-dc5ebc5b2928)
+- [ ] 1/5 for Linear Learner, XGBoost, Seq-to-Seq and DeepAR [**here**](https://medium.com/@tantabase/aws-certified-machine-learning-cheat-sheet-built-in-algorithms-1-8-dc5ebc5b2928)
 
-- [x] 2/5 for BlazingText, Object2Vec, Object Detection and Image Classification and DeepAR [**here**](https://medium.com/@tantabase/aws-certified-machine-learning-cheat-sheet-built-in-algorithms-2-8-cfb70b60603e)
+- [ ] 2/5 for BlazingText, Object2Vec, Object Detection and Image Classification and DeepAR [**here**](https://medium.com/@tantabase/aws-certified-machine-learning-cheat-sheet-built-in-algorithms-2-8-cfb70b60603e)
 
-- [x] 3/5 for Semantic Segmentation, Random Cut Forest, Neural Topic Model and LDA [**here**](https://medium.com/@tantabase/aws-certified-machine-learning-cheat-sheet-built-in-algorithms-3-8-50332ef8de1c)
+- [ ] 3/5 for Semantic Segmentation, Random Cut Forest, Neural Topic Model and LDA [**here**](https://medium.com/@tantabase/aws-certified-machine-learning-cheat-sheet-built-in-algorithms-3-8-50332ef8de1c)
 
-- [x] 4/5 for KNN, K-Means, PCA and Factorization for [**here**](https://medium.com/@tantabase/aws-certified-machine-learning-cheat-sheet-built-in-algorithms-4-8-a17f1bd4918a)
+- [ ] 4/5 for KNN, K-Means, PCA and Factorization for [**here**](https://medium.com/@tantabase/aws-certified-machine-learning-cheat-sheet-built-in-algorithms-4-8-a17f1bd4918a)
 
-- [x] 5/5 for IP insights and reinforcement learning [**here**](https://medium.com/@tantabase/aws-certified-machine-learning-cheat-sheet-built-in-algorithms-5-5-5a940c35b38e)
+- [ ] 5/5 for IP insights and reinforcement learning [**here**](https://medium.com/@tantabase/aws-certified-machine-learning-cheat-sheet-built-in-algorithms-5-5-5a940c35b38e)
 
 ### Machine learning services
 
-- [x] 1/2 for [Comprehend](https://aws.amazon.com/comprehend/), [Translate](https://aws.amazon.com/translate/), [Transcribe](https://aws.amazon.com/pm/transcribe/?gclid=Cj0KCQiApOyqBhDlARIsAGfnyMqL7XtXlZEfKxUeplOK8O0RWM8qTjlRb4OfuugsHeFlzv8D1qLKju4aAkXfEALw_wcB&trk=8217174a-004c-4464-9374-7f64e3ed195f&sc_channel=ps&ef_id=Cj0KCQiApOyqBhDlARIsAGfnyMqL7XtXlZEfKxUeplOK8O0RWM8qTjlRb4OfuugsHeFlzv8D1qLKju4aAkXfEALw_wcB%3AG%3As&s_kwcid=AL%214422%213%21652240143553%21e%21%21g%21%21amazon+transcribe%2119878157838%21144181888781) and [Polly](https://aws.amazon.com/polly/) [**here**](https://medium.com/@tantabase/aws-certified-machine-learning-cheat-sheet-high-level-machine-learning-services-1-2-a44611ea7b4f)
+- [ ] 1/2 for [Comprehend](https://aws.amazon.com/comprehend/), [Translate](https://aws.amazon.com/translate/), [Transcribe](https://aws.amazon.com/pm/transcribe/?gclid=Cj0KCQiApOyqBhDlARIsAGfnyMqL7XtXlZEfKxUeplOK8O0RWM8qTjlRb4OfuugsHeFlzv8D1qLKju4aAkXfEALw_wcB&trk=8217174a-004c-4464-9374-7f64e3ed195f&sc_channel=ps&ef_id=Cj0KCQiApOyqBhDlARIsAGfnyMqL7XtXlZEfKxUeplOK8O0RWM8qTjlRb4OfuugsHeFlzv8D1qLKju4aAkXfEALw_wcB%3AG%3As&s_kwcid=AL%214422%213%21652240143553%21e%21%21g%21%21amazon+transcribe%2119878157838%21144181888781) and [Polly](https://aws.amazon.com/polly/) [**here**](https://medium.com/@tantabase/aws-certified-machine-learning-cheat-sheet-high-level-machine-learning-services-1-2-a44611ea7b4f)
 
-- [x] 2/2 for [Rekognition](https://aws.amazon.com/rekognition/), [Forecast](https://aws.amazon.com/forecast/?gclid=Cj0KCQiApOyqBhDlARIsAGfnyMq9hKZychQpw8JD2JAh-4sYYLzQ-mI5LnsBMW2YiUxAzZ7Le7JOfZgaAoYIEALw_wcB&trk=ba68822c-4d74-4f28-b470-bb363c226519&sc_channel=ps&ef_id=Cj0KCQiApOyqBhDlARIsAGfnyMq9hKZychQpw8JD2JAh-4sYYLzQ-mI5LnsBMW2YiUxAzZ7Le7JOfZgaAoYIEALw_wcB%3AG%3As&s_kwcid=AL%214422%213%21658520966066%21%21%21g%21%21%2119852661900%21149878725980), [Lex](https://aws.amazon.com/pm/lex/?gclid=Cj0KCQiApOyqBhDlARIsAGfnyMpXtw0uw0Z6IYbmaJ6FpN0JhdDDSpsLi8zDOHkl4ry_ChvEiDSRB7MaAlmUEALw_wcB&trk=4a48e9fe-d97e-4c65-9198-d19e154aebd9&sc_channel=ps&ef_id=Cj0KCQiApOyqBhDlARIsAGfnyMpXtw0uw0Z6IYbmaJ6FpN0JhdDDSpsLi8zDOHkl4ry_ChvEiDSRB7MaAlmUEALw_wcB%3AG%3As&s_kwcid=AL%214422%213%21655679338288%21e%21%21g%21%21lex+chat+bot%2120010021061%21151019474849), [Personalize](https://aws.amazon.com/pm/personalize/?gclid=Cj0KCQiApOyqBhDlARIsAGfnyMp7FiAkN-Kb8mbl3MfA6oSEUqOayJjvK6KfkXshCmnqzvq24RP2--QaAhacEALw_wcB&trk=473a5e9e-1da9-4f6f-a2dd-09b316c1258c&sc_channel=ps&ef_id=Cj0KCQiApOyqBhDlARIsAGfnyMp7FiAkN-Kb8mbl3MfA6oSEUqOayJjvK6KfkXshCmnqzvq24RP2--QaAhacEALw_wcB%3AG%3As&s_kwcid=AL%214422%213%21652240143544%21e%21%21g%21%21aws+personalization%2119870609815%21151199930790) [**here**](https://medium.com/@tantabase/aws-certified-machine-learning-cheat-sheet-high-level-machine-learning-services-2-2-055a5da815e2) and [this article](https://medium.com/@tantabase/aws-certified-machine-learning-cheat-sheet-lesser-known-high-level-machine-learning-services-98c14e41423e) on lesser known high level features for industrial or educational purposes
+- [ ] 2/2 for [Rekognition](https://aws.amazon.com/rekognition/), [Forecast](https://aws.amazon.com/forecast/?gclid=Cj0KCQiApOyqBhDlARIsAGfnyMq9hKZychQpw8JD2JAh-4sYYLzQ-mI5LnsBMW2YiUxAzZ7Le7JOfZgaAoYIEALw_wcB&trk=ba68822c-4d74-4f28-b470-bb363c226519&sc_channel=ps&ef_id=Cj0KCQiApOyqBhDlARIsAGfnyMq9hKZychQpw8JD2JAh-4sYYLzQ-mI5LnsBMW2YiUxAzZ7Le7JOfZgaAoYIEALw_wcB%3AG%3As&s_kwcid=AL%214422%213%21658520966066%21%21%21g%21%21%2119852661900%21149878725980), [Lex](https://aws.amazon.com/pm/lex/?gclid=Cj0KCQiApOyqBhDlARIsAGfnyMpXtw0uw0Z6IYbmaJ6FpN0JhdDDSpsLi8zDOHkl4ry_ChvEiDSRB7MaAlmUEALw_wcB&trk=4a48e9fe-d97e-4c65-9198-d19e154aebd9&sc_channel=ps&ef_id=Cj0KCQiApOyqBhDlARIsAGfnyMpXtw0uw0Z6IYbmaJ6FpN0JhdDDSpsLi8zDOHkl4ry_ChvEiDSRB7MaAlmUEALw_wcB%3AG%3As&s_kwcid=AL%214422%213%21655679338288%21e%21%21g%21%21lex+chat+bot%2120010021061%21151019474849), [Personalize](https://aws.amazon.com/pm/personalize/?gclid=Cj0KCQiApOyqBhDlARIsAGfnyMp7FiAkN-Kb8mbl3MfA6oSEUqOayJjvK6KfkXshCmnqzvq24RP2--QaAhacEALw_wcB&trk=473a5e9e-1da9-4f6f-a2dd-09b316c1258c&sc_channel=ps&ef_id=Cj0KCQiApOyqBhDlARIsAGfnyMp7FiAkN-Kb8mbl3MfA6oSEUqOayJjvK6KfkXshCmnqzvq24RP2--QaAhacEALw_wcB%3AG%3As&s_kwcid=AL%214422%213%21652240143544%21e%21%21g%21%21aws+personalization%2119870609815%21151199930790) [**here**](https://medium.com/@tantabase/aws-certified-machine-learning-cheat-sheet-high-level-machine-learning-services-2-2-055a5da815e2) and [this article](https://medium.com/@tantabase/aws-certified-machine-learning-cheat-sheet-lesser-known-high-level-machine-learning-services-98c14e41423e) on lesser known high level features for industrial or educational purposes
 
 ### MLOps in AWS
 
@@ -63,9 +63,11 @@ Content that needs to be covered related to the exam, additional resources can b
 
 ### Miscellaneous
 
-- [x] Lesser Known High Level Machine Learning Services [here](https://medium.com/@tantabase/aws-certified-machine-learning-cheat-sheet-lesser-known-high-level-machine-learning-services-98c14e41423e)
+- [ ] Lesser Known High Level Machine Learning Services [here](https://medium.com/@tantabase/aws-certified-machine-learning-cheat-sheet-lesser-known-high-level-machine-learning-services-98c14e41423e)
 - [ ] Exploratory Data Analysis [here](https://medium.com/@tantabase/aws-certified-machine-learning-cheat-sheet-eda-02262f1ee26e)
 - [ ] Rules of Machine Learning: Best Practices for ML Engineering [here](https://martin.zinkevich.org/rules_of_ml/rules_of_ml.pdf)
+- [ ] Machine Learning Glossary [here](https://developers.google.com/machine-learning/glossary)
+- [ ] [AWSMachineLearningCertification](https://github.com/understructure/AWSMachineLearningCertification)
 
 [^1]: [Setting up secure, well-governed machine learning environments on AWS](https://aws.amazon.com/blogs/mt/setting-up-machine-learning-environments-aws/)
 
