@@ -21,7 +21,7 @@ new_data["column_name"] = data["column_name"].map({"Y": 1, "N": 0})
 
 ### Ordinal categorical
 
-Describes information that can be categorized and has a distinct order or ranking. Same `pandas` implementation, but encoding many categorical variables. This is ideal if the feature can be thought of as an ordinal categorical variable.
+Describes information that can be categorised and has a distinct order or ranking. Same `pandas` implementation, but encoding many categorical variables. This is ideal if the feature can be thought of as an ordinal categorical variable.
 
 ```python
 new_data["column_name"] = df["column_name"].map(
@@ -36,7 +36,7 @@ Nominal data is categorical data that may be divided into groups, but these grou
 ## Scaling
 ### Feature scaling
 
-The process of transforming the numerical features of a dataset into a standardized range. It involves bringing all the features to a similar scale, so that no single feature dominates the learning algorithm. By scaling the features, we can ensure that they contribute equally to the model’s performance.
+The process of transforming the numerical features of a dataset into a standardised range. It involves bringing all the features to a similar scale, so that no single feature dominates the learning algorithm. By scaling the features, we can ensure that they contribute equally to the model’s performance.
 
 ### MinMax scaling
 
@@ -52,13 +52,13 @@ The maximum absolute scaling rescales each feature between -1 and 1 by dividing 
 
 ### Normalizer
 
-Broadly speaking, the process of converting a variable's actual range of values into a standard range of values
+Broadly speaking, the process of converting a variable's actual range of values into a standard range of values.
 
 ## Feature engineering techniques
 
 ### t-Distributed Stochastic Neighbor Embedding (t-SNE)
 
-t-SNE (t-distributed Stochastic Neighbor Embedding) is an unsupervised non-linear dimensionality reduction technique for data exploration and visualizing high-dimensional data. Non-linear dimensionality reduction means that the algorithm allows us to separate data that cannot be separated by a straight line.
+t-SNE (t-distributed Stochastic Neighbor Embedding) is an unsupervised non-linear dimensionality reduction technique for data exploration and visualising high-dimensional data. Non-linear dimensionality reduction means that the algorithm allows us to separate data that cannot be separated by a straight line.
 
 ### Principal Component Analysis (PCA) algorithm
 
@@ -159,18 +159,18 @@ The prefix “hyper” in the term hyperparameters indicates their role as top-l
 
 ### XGBoost
 
-| Name               | Description                                                                                                                                                                                              |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `subsample`        | Subsample ratio of the training instance. Setting it to 0.5 means that XGBoost randomly collects half of the data instances to grow trees. This prevents overfitting.                                    |
-| `eta`              | Step size shrinkage used in updates to prevent overfitting.                                                                                                                                              |
-| `gamma`            | Minimum loss reduction required to make a further partition on a leaf node of the tree. The larger, the more conservative the algorithm is.                                                              |
-| `alpha`            | L1 regularization term on weights. Increasing this value makes models more conservative.                                                                                                                 |
-| `lamda`            | L2 regularization term on weights. Increasing this value makes models more conservative.                                                                                                                 |
-| `eval_metric`      | sets optimization metric. Can set it to AUC if you care about false positives. Can also set it to root mean square error (RMSE) `rmse`: for regression, `error`: for classification, `map`: for ranking. |
-| `scale_pos_weight` | Controls the balance of positive and negative weights. It's useful for unbalanced classes. A typical value to consider: `sum(negative cases)` / `sum(positive cases)`.                                   |
-| `max_depth`        | Maximum number of nodes to be added. Relevant only if grow_policy is set to lossguide.                                                                                                                   |
+| Name               | Description                                                                                                                                                                                                                 |
+| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `subsample`        | Subsample ratio of the training instance. Setting it to 0.5 means that XGBoost randomly collects half of the data instances to grow trees. This prevents overfitting.                                                       |
+| `eta`              | Step size shrinkage used in updates to prevent overfitting.                                                                                                                                                                 |
+| `gamma`            | Minimum loss reduction required to make a further partition on a leaf node of the tree. The larger, the more conservative the algorithm is.                                                                                 |
+| `alpha`            | L1 regularization term on weights. Increasing this value makes models more conservative.                                                                                                                                    |
+| `lamda`            | L2 regularization term on weights. Increasing this value makes models more conservative.                                                                                                                                    |
+| `eval_metric`      | Sets optimization metric. Can set it to area under cover (AUC) if you care about false positives. Can also set it to root mean square error (RMSE) `rmse`: for regression, `error`: for classification, `map`: for ranking. |
+| `scale_pos_weight` | Controls the balance of positive and negative weights. It's useful for unbalanced classes. A typical value to consider: `sum(negative cases)` / `sum(positive cases)`.                                                      |
+| `max_depth`        | Maximum number of nodes to be added. Relevant only if grow_policy is set to lossguide.                                                                                                                                      |
 
-### Creating AWS training job
+### Configuring AWS training job
 
 Below is an example for starting a training job for `XGBoost` and configuring hyperparameters.
 
