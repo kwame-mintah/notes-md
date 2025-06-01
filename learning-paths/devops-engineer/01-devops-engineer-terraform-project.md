@@ -41,19 +41,19 @@ For the project a [simple build specification](https://raw.githubusercontent.com
 
 ### Deployment
 
-[AWS CodeDeploy](https://docs.aws.amazon.com/codedeploy/latest/userguide/welcome.html) automates application deployments to Amazon EC2 instances, on-premises instances, serverless Lambda functions, or Amazon ECS services. No EC2 instances or ECS service will provisioned, to help keep the project as simple as possible, because deploying a containerised application will require additional work to make accessible over the internet.
+[AWS CodeDeploy](https://docs.aws.amazon.com/codedeploy/latest/userguide/welcome.html) automates application deployments to Amazon EC2 instances, on-premises instances, serverless Lambda functions, or Amazon ECS services. No EC2 instances or ECS service will provisioned, to help keep the project as simple, deploying a containerised application will require additional work to make accessible over the internet.
 
-An alternative approach was taken, where a CloudFormation template was created, to created and/or update a Lambda function. The CodePipeline would be invoked by another pipeline, passing in necessary variables to to start the pipeline. This is because a pipeline can only have one source and wanted to re-use a template stored in another repository, so two pipelines needed to be created.
+An alternative approach was taken, where a CloudFormation template was created, to created and/or update a Lambda function. CodePipeline would invoke another pipeline, passing in necessary variables to to start the pipeline. This is because a pipeline can only have one source and I wanted to re-use a template stored in another repository, so two pipelines needed to be created.
 
 ### Infrastructure as Code
 
-As mentioned earlier, both Terraform and AWS CloudFormation to provision resources within AWS. For example, Terraform was used to provision a stack using a CloudFormation template. If a template has defined outputs, these can be used elsewhere within Terraform:
+As mentioned earlier, both Terraform and AWS CloudFormation are used to provision resources within AWS. For example, Terraform was used to provision a stack using a CloudFormation template. If a template has defined outputs, these can be used elsewhere within Terraform in the code snippet below, the DynamoDB table name is an output of a CloudFormation template, so can be referenced in Terraform elsewhere e.g. setting an environment variable for Lambda:
 
 ```terraform
 aws_cloudformation_stack.dynamodb_table_stack.outputs["TableName"]
 ```
 
-AWS CodePipeline can also deploy CloudFormation templates, in the code snippet above, the DynamoDB table name can be passed as an environment variable when deploying a Lambda function using CloudFormation.
+AWS CodePipeline can also deploy CloudFormation templates, given required inputs for the template have been passed across.
 
 > [!IMPORTANT]
 > If an AWS CodePipeline provisioned by Terraform is used to create
@@ -72,9 +72,9 @@ CodePipeline had an IAM role created to allow permission to CodeConnections, Cod
 
 CloudFormation IAM role to allow permission to create all resources stated in the template being run, for example allow permissions for [Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html) so the resource can be created and/or destroyed.
 
-The Lambda function deployed, has a role created as part of CloudFormation, this role would allow the lambda the necessary permissions against the specified DynamoDB table.
+The Lambda function deployed, has a role created as part of CloudFormation template, this role allows the Lambda necessary permissions against the specified DynamoDB table.
 
-[AWS Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html)  helps manage, retrieve, and rotate database credentials, application credentials, OAuth tokens, API keys, and other secrets throughout their lifecycle. Unfortunately for this project the database chosen being DynamoDB did not have any credentials associated with it, so there was no need to use this service, however if an [Amazon Relational Database Service (Amazon RDS)](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html) was deployed, Secrets Manager would be used.
+[AWS Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html)  helps manage, retrieve, and rotate database credentials, application credentials, OAuth tokens, API keys, and other secrets throughout their lifecycle. Unfortunately for this project the database chosen DynamoDB does not have any credentials associated, so there was no need to use this service, however if an [Amazon Relational Database Service (Amazon RDS)](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html) was deployed, Secrets Manager would be used.
 
 ### Automation
 
@@ -83,4 +83,4 @@ AWS Lambda is used to run code without provisioning or managing servers. The Lam
 ![aws-lambda-function-web-console-overview](https://raw.githubusercontent.com/kwame-mintah/aws-fastapi-lambda-api-gateway/refs/heads/main/docs/aws-lambda-function-overview.png)
 
 ---
-#aws #aws-devops #dynamodb #terraform
+#aws #aws-devops #dynamodb #terraform #dop-c02
