@@ -14,9 +14,9 @@ The prompt isn't perfect, but it aims to get the LLM to generate questions and p
 
 ```markdown
 
-Create 65 sample questions based on past AWS DevOps Professional multiple choice exam questions. Use AWS white papers, case studies, exam dumps from current and past years to formulate these questions. Match the same style of questioning, do not deviate from this.
+Create 65 sample questions using past AWS DevOps Professional (DOP-C02) multiple choice exam questions. Utilising AWS white papers, case studies, official practice question set and exam dumps from current and past years to formulate questions. Use the the same style of questioning, do not deviate from this, see https://d1.awsstatic.com/training-and-certification/docs-devops-pro/AWS-Certified-DevOps-Engineer-Professional_Sample-Questions.pdf as an example.
 
-The exam must cover tasks such as, but not limited to:
+The exam must cover tasks but is not not limited to:
 
 - Implement and manage continuous delivery systems and methodologies on AWS.
 - Implement and automate security controls, governance processes, and compliance validation.
@@ -40,8 +40,9 @@ Provide questions one by one and wait for a response to answer. There are two ty
 - Multiple response: 
  - Has two or more correct responses out of five or more response options
 
-
 After provide the correct answer to the question with a source to the answer.
+
+Before asking the first question, list in-scope AWS services and features for the exam and ensure they match the official exam guide found.
 
 ```
 
