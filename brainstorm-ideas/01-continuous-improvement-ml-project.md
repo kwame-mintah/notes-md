@@ -2,7 +2,7 @@
 
 ## Background
 
-I recently watched the movie [The Mill (2023)](https://en.wikipedia.org/wiki/The_Mill_(2023_film)) in which a man is kept in a cell by his employer Mallard. We find out that the main protagonist Joe has been locked in the cell due to poor performance and is being held captive as part of an *"advanced career training"*  to become the best version of yourself.
+I recently watched the movie [The Mill (2023)](https://en.wikipedia.org/wiki/The_Mill_(2023_film)) in which a man is kept in a cell by his employer Mallard. The main protagonist Joe has been locked in the cell due to poor performance and is being held captive as part of an *"advanced career training"*  to become the best version of yourself.
 
 > *"Your company for life"* - Mallard
 
@@ -158,11 +158,11 @@ These forms of AI can be beneficial below are a couple identified and what they 
 
 ## Summary
 
-In summary, organisations have large amounts of data of what is happening in all areas, why not centralise this data and use it to benefit their employees through career growth and self improvement .... TBC...
+In summary, organisations have large amounts of data, containing what is happening in all areas, why not centralise this data and use it to benefit their employees through career growth and self improvement. Employees being given opportunities to upskill and keep providing value, means we can improve employee satisfaction within organisations.
 
 ## Further questions
 
-Below are a list of questions that would be interesting to see answered, if a something like this every implemented:
+Below are a list of questions that would be interesting to see answered, i if the solution was to be implemented:
 
 - Is encouraging people to always improve, breed a competitive company culture?
 - How do you measure the success of an employee taking on a suggestion? Not all improvements can be measured, especially those that build peoples character.
