@@ -10,7 +10,7 @@ Working within customer support, employees have to deal with numerous customers,
 
 When calling a customer support hotline, information needs to provided to ensure you are connected to the correct person who can help with your inquiry. If the person you connected with is unable to assist you, they will transfer the call to someone who can help.
 
-Too often, you will find the need to repeat the same information to this person, before they can proceed further.
+Too often, you will find the need to repeat the same information to another person, before they can proceed further.
 
 ## Case in point
 
@@ -22,7 +22,7 @@ And in some cases, I will have to wait for a call from someone else who can assi
 
 The idea is to use AI, to listen into customer phone calls and actively take notes to assist the employee handling the request. This could be in the form of helping the employee navigate through their in-house application to find the necessary information, which will result with helping resolve the customer request quicker.
 
-Rather than, "can you please hold while I pull up your file..." the information would have already been presented to the employee and allow them to continue with assisting the customer and remove the wait in between trying to find certain information.
+Rather than, "can you please hold while I pull up your file..." the information is already presented to the employee and allow them to continue with assisting the customer and remove the wait in-between trying to find and/or retrieve information.
 
 Ideally, the AI would be populating the correct fields that the employee can see on their screen, for example the customer might need to provide their first and last name in order to find their account. The solution would understand the key information that the customer has provided and pre-populate these fields.
 
@@ -34,7 +34,7 @@ As there is now a transcript of the call between the customer and the employee, 
 
 ### Example 1
 
-The customer has called in to reset their account password. The call transcript might be the following _(lines crossed out is what we are to eliminating)_:
+The customer has called in to reset their account password. The call transcript might be the following _(lines crossed out to represent what we are eliminating)_:
 
 > **Customer**: I need help resetting my account password.
 >
@@ -52,7 +52,7 @@ The customer has called in to reset their account password. The call transcript 
 >
 > ....
 
-In this example, we want to eliminate the need to put the customer on hold. This may because that the employee needs to navigate to the page to enter the customers information, while actively listening to the customer. There may be instances, where the information the customer provided may be incorrect and will be placed on hold again to find the account details again.
+In this example, we want to eliminate the need to put the customer on hold. This could be because that the employee needs to navigate to the page to enter the customers information, while actively listening to the customer. There may be instances, where the information the customer provided may be incorrect and will be placed on hold again to find the account details again.
 
 ### Example 2
 
@@ -76,7 +76,7 @@ The customer has called for assistance, but has been redirected to the wrong dep
 
 In this example, the customer has called for help with their account. However, the customer support employee is unable to help with their request as they are unaware of the process and need to have the call transferred. In this instance, the call is transferred successfully to someone who is able to assist the customer. Note, that the customer had to repeat the same information again to the person they were transferred to.
 
-Luckily, there was someone ready to take the customers call after being transferred. However, if there is no available people to assist, they would be placed on hold for a long time or potentially have to have someone call them back when they are free to assist.
+Fortunately, there was someone ready to take the customers call after being transferred. However, if there is no one available to assist, they would be placed on hold for a long time or potentially have to have someone call them back when they are free to assist.
 
 ## Proposed solution
 
@@ -112,9 +112,22 @@ In the example flow above, the user has called customer support to resolve an is
 - Entity recognition
   - Identify commonly used and domain-specific terms for extraction.
 
+## Plausible Benefits
+
+1. Improved customer satisfaction,
+2. Potential for upskilling current employees in different areas,
+
 ## Summary
 
-TBC.
+In summary, we are trying to create a solution that can assist customer support to better aid customers and improve the experience on both sides of the conversation. By becoming more efficient in assisting and resolving customer problems, allowing for more calls to be completed successfully.
+
+## Further questions
+
+Below are some questions that would be interesting to see answered, if the solution was to be implemented:
+
+- How much effort would it take to create a _foundation_ model that is able to understand different user inferences (UI), so that the AI solution can be deployed to various places?
+- With the growing assumption that most jobs can be replaced, will implementing this further push the agenda - unintentionally?
+- Which industries would benefit the most from this solution? Tech support, Emergency services?
 
 ---
-#ideas #ai #draft
+#ideas #ai #ml
