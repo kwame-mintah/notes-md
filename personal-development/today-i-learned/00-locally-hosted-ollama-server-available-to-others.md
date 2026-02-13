@@ -120,6 +120,16 @@ Additionally, I can check what models and/or text embeddings were avaliable on O
 curl https://ollama.intuitive-judgments.com/api/tags
 ```
 
+## Creating the tunnel via Terraform
+
+I also replicated the tunnel creation via Terraform, using the [cloudflare provider](https://registry.terraform.io/providers/cloudflare/cloudflare/latest) in the following repository [terraform-cloudflare-resources](https://github.com/kwame-mintah/terraform-cloudflare-resources). With this approach, the user will need to run the following command on the chosen machine:
+
+```bash
+cloudflared.exe service install eyJhIj...
+```
+
+This method replaces both the `config.yaml` and credentials file, that would have been stored / required, when running `cloudflare tunnel run ...` as such the ingress config etc, [is stored in Cloudflare](https://github.com/kwame-mintah/terraform-cloudflare-resources/blob/0e43eeb5729dd8a0af7e6c4ffdb725c0228d63ff/main.tf#L5-L33). This means no configuration or credentials are stored on the machine.
+
 ## Next steps
 
 - [ ] Lockdown the tunnel
