@@ -114,7 +114,7 @@ cloudflared tunnel run ollama-tunnel
 
 I then check on a different network, to see if Ollama was reachable, either by visiting `ollama.intuitive-judgments.com` on the browser to get the message `"Ollama is running"`.
 
-Additionally, I can check what models and/or text embeddings were avaliable on Ollama.
+Additionally, I can check what models and/or text embeddings were available on Ollama.
 
 ```bash
 curl https://ollama.intuitive-judgments.com/api/tags
