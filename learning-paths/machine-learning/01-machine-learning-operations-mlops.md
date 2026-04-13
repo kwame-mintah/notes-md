@@ -43,7 +43,7 @@ Understand how to use the machine learning (ML) pipelines to solve a real busine
 - Evaluating the effectiveness of the model
 - Setting the model up to make ongoing predictions
 
-![Example of a basic machine learning workflow](attachments/aws-basic-machine-learning-workflow-in-vpc.png)
+![Example of a basic machine learning workflow](../../attachments/aws-basic-machine-learning-workflow-in-vpc.png)
 
 ## Resources
 

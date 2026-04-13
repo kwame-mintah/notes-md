@@ -95,7 +95,7 @@ Using the GCP console on my personal account, I had to navigate to the following
     - Enter the Principals' email address
     - Assign the role 'Billing Account User'
 
-![Troubleshooting billing account permissions](attachments/troubleshooting-gcp-billing-account-permissions-linkage.png)
+![Troubleshooting billing account permissions](../../attachments/troubleshooting-gcp-billing-account-permissions-linkage.png)
 
 Running the command again to view the IAM policy, I could confirm that my organisation account, had access to the billing account set up with my personal GCP:
 
